@@ -147,6 +147,8 @@ googlemaps:
   url: "https://g.page/cdavidmaxey"
   placeid: "ChIJobOD-_sNlVQR4T-nHBAoTMw"
   url_placeid: "https://www.google.com/maps/place/?q=place_id:ChIJobOD-_sNlVQR4T-nHBAoTMw"
+  cid: "14721185331632619489"
+  url_cid: "https://www.google.com/maps?cid=14721185331632619489"
   api: "https://maps.googleapis.com/maps/api/staticmap"
   center: "Portland Psychological Services"
   zoom: "15"
