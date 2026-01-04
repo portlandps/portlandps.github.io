@@ -22,7 +22,7 @@
 "telephone":"{{site.data.x.tel}}",
 "email":"mailto:{{site.data.x.email|downcase}}",
 "contactPoint":[
-	{"@type":"ContactPoint","telephone":"{{site.data.x.tel}}","contactOption":"Phone with Voicemail"},
+	{"@type":"ContactPoint","telephone":"{{site.data.x.tel}}","contactType":"Phone with Voicemail"},
 	{"@type":"ContactPoint","email":"mailto:{{site.data.x.email|downcase}}"}],
 "address":{"@type":"PostalAddress",
     "streetAddress":"{{site.data.x.address}}",
