@@ -55,7 +55,7 @@ schema_images:
   - "https://static.portlandpsychological.services/1920/street-view.jpg"
 schema_hasMap:
   - "https://g.page/cdavidmaxey"
-  - "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.4274652%2C-122.7486293&heading=150&fov=70&pitch=0"
+  - "https://www.google.com/maps?cid=14721185331632619489"
 schema_Services:
   - type: "PsychologicalTreatment"
     name: "Psychotherapy"
