@@ -157,7 +157,7 @@ googlemaps:
   markers: "/map-pin.png"
   markers_address: "6950 SW Hampton St Suite 207, Portland, OR"
   key: "AIzaSyDCxo9x_qGwB3DbswOdJaEqbsMxEcalTgA"
-  signature: "4bQNSBslnRNwUkZrV3xaGzRrC_E="
+  signature: "_KlfgP1083Ly15TMtPIKWDPWHfk="
 # Documentation for URL Links
 # https://developers.google.com/maps/documentation/urls/guide
 #
