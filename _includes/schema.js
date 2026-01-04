@@ -1,4 +1,4 @@
-<script type="application/ld+json">{"@context":"http://schema.org","@graph":[{% if page.layout == "post" %}{
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{% if page.layout == "post" %}{
 "@type":"BlogPosting",
 "headline":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
 "image":"{% if page.header_w.size > 1 %}[{% endif %}{% for w in page.header_w %}{{site.data.x.cache}}/{{w}}/{{page.header}}{% unless forloop.last %},{% endunless %}{% endfor %}{% if page.header_w.size > 1 %}]{% endif %}",

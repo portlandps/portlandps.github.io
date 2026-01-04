@@ -51,7 +51,7 @@ zip: "97223"
 country: "US"
 # {{site.data.x.country}}
 schema_images:
-  - "https://static.portlandpsychological.services/covers/1398/office.jpg"
+  - "https://static.portlandpsychological.services/1920/office.jpg"
   - "https://static.portlandpsychological.services/1920/street-view.jpg"
 schema_hasMap:
   - "https://g.page/cdavidmaxey"
