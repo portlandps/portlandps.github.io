@@ -1,0 +1,67 @@
+---
+published: TRUE
+sitemap: 0.7
+layout: page
+redirect_from:
+- "/blog/"
+- "/blog/page2/"
+- "/blog/page3/"
+- "/positive-discipline/"
+- "/Positive-discipline/"
+- "/positive-Discipline/"
+- "/Positive-Discipline/"
+- "/positivediscipline/"
+- "/Positivediscipline/"
+- "/positiveDiscipline/"
+- "/PositiveDiscipline/"
+- "/Positive-Discipline-Kind-and-firm-with-mutual-respect/"
+- "/Brushing-teeth-Having-trouble-getting-them-clean/"
+- "/Sunscreen-wont-work-if-it-stays-in-the-bottle/"
+- "/Sunscreen-lotion-wont-work-if-it-stays-in-the-bottle/"
+- "/Sun-protection-Sunscreen-wont-work-if-it-stays-in-the-bottle/"
+title: "Articles | Portland Psychological Services"
+description: "Articles for parents and teachers about evidence-based practices, psychological services, and school-based supports for children and youth"
+FacultyGlyphic: true
+Tangerine:
+RobotoCondensed:
+header:
+schema:
+breadcrumb: "Articles"
+css: |-
+  h1{font-size:2.5rem;font-weight:normal;line-height:1.15;margin:0 auto 1rem;color:light-dark(#1a237e,#e0e0e0)}
+  .text{margin:0 auto 2rem;max-width:50rem;text-align:justify;line-height:1.25}
+  p{margin:0 0 1.25em}
+  h2{color:light-dark(#1a237e,#e0e0e0);font-size:1.5rem;margin:0 0 1.125rem;font-weight:500}
+  .tags{max-width:50rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.5em;text-align:left;margin:0 auto 2.5rem}
+  .tag,.tag:hover{margin:0 0 0 1em;position:relative;z-index:1;padding:.425em .5em .425em .75em;border-radius:0 .375em .375em 0;display:inline-block;line-height:1.15;background-color:#767676;color:#fff}
+  .tag:before{position:absolute;z-index:-1;transform:translateY(-50%) translateX(50%) rotate(-45deg);top:50%;right:100%;content:'';background-color:inherit;height:70.71067812%;aspect-ratio:1/1}
+  .tag:after{position:absolute;content:'';top:50%;left:-.25em;margin-top:-.25em;background-color:#fff;width:.5em;height:.5em;box-shadow:0 -.0625rem .0625rem 0 rgba(0, 0, 0, .5);border-radius:50%}
+  .tag span{background:#fff;color:#000;padding:0 .35rem .0625rem;border-radius:.45rem;box-shadow:0 -.0625rem .0625rem 0 rgba(0, 0, 0, .5)}
+  .tag.wrapped{line-height:1.15}
+  .tag.wrapped span{position:absolute;right:.5em;top:calc(50% - .575em)}
+  .tag.wrapped::before {width:2.451em;height:2.451em}
+  .articles{max-width:75rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:stretch;gap:.5rem}
+  .article{flex:0 0 100%;background-color:#3949ab;text-decoration:none}
+  .article img{display:block}
+  .article *{margin:0;color:white}
+  @container clickable-main (width >= 32.5rem){.article{flex-basis:calc(50% - .25rem)}}
+  @container clickable-main (width >= 49rem){.article{flex-basis:calc(100% / 3 - (1rem / 3))}}
+  @container clickable-main (width >= 65.5rem){.article{flex-basis:calc(25% - .375rem)}}
+  .article div{font-weight:bold;text-align:left;padding:.5rem;background-color:#1a237e}
+  .article div>span{font-weight:normal}
+  .article p{padding:.5rem;font-size:.875rem}
+comment: ".tag:before = height / sqrt(2)"
+---
+<section class="text">
+	<h1 class="center">General Information Articles</h1>
+	<p>Sometimes, parents need straightforward answers to simple questions (e.g., what is the recommended amount of sleep for children my kid’s age?) or an introduction to an issue we’ll discuss in more detail during our appointment (e.g., should my child repeat or skip a grade in school?). In such cases, I might refer parents to one of these articles for general informational purposes. Please note, these articles do not constitute psychological, medical, or legal advice.</p>
+</section>{% if site.tags %}{% capture x %}{% for y in site.tags %}{{y[0]}}{% unless forloop.last %}^{% endunless %}{% endfor %}{% endcapture %}{% assign tags = x | split: "^" | sort %}
+<h2 class="center">Topics Filter</h2>
+<section class="tags">{% for tag in tags %}<a class="tag {{tag|slugify}}" onclick="t('{{tag|slugify}}')">{{tag}}&ensp;<span>{% for size in site.tags %}{% if tag == size[0] %}{{size[1].size}}{% endif %}{% endfor %}</span></a>{% endfor %}</section>{% endif %}
+<section class="articles" id="a">{% assign posts = site.posts | sort: 'updated' | reverse %}{% for post in posts %}
+	<a class="article{% for tag in post.tags %} {{tag|slugify}}{% endfor %}" href="{{site.url}}{{post.url}}">
+		<picture><source srcset="{% for width in post.header_w %}{% if width <= 3840 %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{width}}/{{post.header}}.avif {{width}}w{% endif %}{% endfor %}" type="image/avif"><img src="{{site.data.x.cache}}/{{post.header_w[0]}}/{{post.header}}" srcset="{% for width in post.header_f %}{% if width <= 1280 %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{width}}/{{post.header}}.jpg {{width}}w{% endif %}{% endfor %}" width="{{post.header_f[0]}}" height="{{post.header_h[0]}}" sizes="(width < 34.5rem) calc(100vw - 2rem),(34.5rem <= width < 51rem) calc(50vw - 1.25rem),(51rem <= width < 67.5rem) calc((100vw / 3) - 1rem),(67.5rem <= width < 77rem) calc(25vw - .875rem),(width >= 77rem) 18.375rem" class="responsive" fetchpriority="{% if forloop.index > 4 %}low{% else %}high{% endif %}" loading="{% if forloop.index > 4 %}lazy{% else %}eager{% endif %}" alt="{{post.alt}}"></picture>
+		<div>{% if post.title_br %}{% for title in post.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if post.title_sub %} <span>{{post.title_sub}}</span>{% endif %}{% else %}{{post.title}}{% endif %}</div>
+		<p>{{post.description}}</p>
+	</a>{% endfor %}
+</section>

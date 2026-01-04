@@ -1,0 +1,8 @@
+---
+---
+User-agent: *
+Disallow: /success/
+Disallow: /A-Nation-Empowered-
+Disallow: /NASP-
+Disallow: /ODE-
+Sitemap: {{site.url}}/sitemap.xml

@@ -1,0 +1,6 @@
+gems:
+  - jekyll-redirect-from
+timezone: America/Los_Angeles
+permalink: /:title/
+markdown: kramdown
+url: https://portlandpsychological.services

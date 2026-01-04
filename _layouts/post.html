@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<div>
+	<h1 class="center">{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} <br>{% endunless %}{% endfor %}{% else %}{{page.title}}{% endif %}{% if page.title_sub %} <br><span id="subtitle">{{page.title_sub}}</span>{% endif %}</h1>
+	{% if page.updated != null %}<div class="timeago">Updated: <span id="updated" title="{{ page.updated | date: '%e %B %Y' }}">{{ page.updated | date: '%e %B %Y' }}</span></div>{% endif %}<div class="timeago">Published: <span id="published" title="{{ page.date | date: '%e %B %Y' }}">{{ page.date | date: '%e %B %Y' }}</span></div>
+	{{content}}
+<div class="clear"></div>
+</div>{% assign solo = true %}{% if page.tags %}
+<div class="tags">{% for tag in page.tags %}{% for size in site.tags %}{% if tag == size[0] %}{% if size[1].size == 1 %}<div class="tag">{{tag}}&ensp;<span>{{size[1].size}}</span></div>{% else %}{% assign solo = false %}<a class="tag" href="{{site.url}}/articles/#{{tag | slugify}}">{{tag}}&ensp;<span>{{size[1].size}}</span></a>{% endif %}{% endif %}{% endfor %}{% endfor %}</div>{% endif %}{% if solo == false %}
+<nav class="articles">{% assign posts = site.posts | sort: 'updated' | reverse %}{% assign counter = 0 %}{% for post in posts %}{% if post.id == page.id %}{% continue %}{% endif %}{% for tag in page.tags %}{% if post.tags contains tag %}{% assign counter = counter | plus: 1 %}
+	<a class="article" href="{{site.url}}{{post.url}}">
+		<picture><source srcset="{% for width in post.header_w %}{% if width <= 3840 %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{width}}/{{post.header}}.avif {{width}}w{% endif %}{% endfor %}" type="image/avif"><img src="{{site.data.x.cache}}/{{post.header_w[0]}}/{{post.header}}.jpg" srcset="{% for width in post.header_w %}{% if width <= 1280 %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{width}}/{{post.header}}.jpg {{width}}w{% endif %}{% endfor %}" width="{{post.header_w[0]}}" height="{{post.header_h[0]}}" sizes="(width < 34.5rem) calc(100vw - 2rem),(34.5rem <= width < 51rem) calc(50vw - 1.25rem),(51rem <= width < 52rem) calc((100vw / 3) - 1rem),(width >= 52rem) 16.333125rem" class="responsive" alt="{{post.alt}}"></picture>
+		<div>{% if post.title_br %}{% for title in post.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if post.title_sub %} {{post.title_sub}}{% endif %}{% else %}{{post.title}}{% endif %}</div>
+		<p>{{post.description}}</p>
+	</a>{% break %}{% endif %}{% endfor %}{% if counter >= site.data.x.related %}{% break %}{% endif %}{% endfor %}{%comment%}
+	<div class="pager buttons">{% if page.next.url %}
+		<a href="{{site.url}}{{page.next.url}}">Newer Article</a>{% endif %}{% if page.previous.url %}
+		<a href="{{site.url}}{{page.previous.url}}">Older Article</a>{% endif %}
+	</div>{%endcomment%}
+</nav>{% endif %}
