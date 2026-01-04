@@ -1,8 +1,8 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% assign sortedpages = site.pages | sort: 'sitemap' | default: 0 | reverse %}
-{% for page in sortedpages %}{% if page.sitemap %}<url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}{% if page.sitemap %}<url>
 	<loc>{{site.url}}{{page.url | remove: 'index.html'}}</loc>
 	<priority>{{page.sitemap}}</priority>
 </url>{% endif %}{% endfor %}{% assign posts = site.posts | sort: 'updated' | reverse %}
