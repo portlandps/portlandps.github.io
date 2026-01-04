@@ -9,6 +9,6 @@
 {% for post in posts %}<url>
 	<loc>{{site.url}}{{post.url}}</loc>
 	<lastmod>{% if post.updated %}{{post.updated | date_to_xmlschema}}{% else %}{{post.date | date_to_xmlschema}}{% endif %}</lastmod>
-	<priority>{% if post.sitemap %}{{post.sitemap}}{% else %}0.5{%endif%}</priority>
+	<priority>{% if post.sitemap %}{{post.sitemap}}{% else %}0.5{% endif %}</priority>
 </url>{% endfor %}
 </urlset>
