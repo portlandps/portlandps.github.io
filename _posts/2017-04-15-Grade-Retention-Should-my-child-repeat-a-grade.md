@@ -52,7 +52,7 @@ css: |-
 	<a rel="nofollow" href="{{site.url}}/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.pdf"><picture><source srcset="{{site.data.x.cache}}/414/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.avif 414w" type="image/avif"><img alt="NASP White Paper on Grade Retention and Social Promotion (2011)" width="414" height="536" src="{{site.data.x.cache}}/414/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.jpg" class="bookborder responsive"></picture></a>
     <a class="download" rel="nofollow" href="{{site.url}}/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.pdf" download="NASP White Paper on Grade Retention and Social Promotion 2011.pdf"><div><svg><use href="#svg-download"/></svg>&ensp;Download</div></a>
 </aside>
-<p>The NASP warns that grade retention carries significant risks with few, if any, potential benefits (see White Paper excerpted above). Broadly, a few important questions include:</p>
+<p>The NASP warns that grade retention carries significant risks with few, if any, potential benefits (see White Paper excerpted above). A few important questions for parents to consider include:</p>
 <ul>
 	<li><strong>Instructional Efficacy:</strong> How will simply repeating the same instruction produce different results?</li>
 	<li><strong>Developmental Cost: </strong> How does the rationale for retention weigh against the developmental impact of delaying&mdash;or effectively losing&mdash;an entire year?</li>
