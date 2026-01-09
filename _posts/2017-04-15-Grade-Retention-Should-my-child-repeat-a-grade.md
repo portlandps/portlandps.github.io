@@ -40,7 +40,7 @@ css: |-
 <p>The National Association of School Psychologists (NASP) advises against holding a student back to repeat a grade (i.e., grade retention), advocating instead for intensive, individualized intervention (see Position Statement excerpted above).</p>
 <p>If your child’s academic performance is substantially below grade level, </p>
 <ul>
-	<li>I recommend reading my brief article on <a href="{{site.url}}/Special-Education-Rights-Requesting-eligibility-evaluation/">requesting a Special Education evaluation</a>. <span class="italic">It is important to consider whether your child might have a learning disability.</span></li>
+	<li>I recommend reading my brief article on <a href="{{site.url}}/Special-Education-Requesting-an-eligibility-evaluation/">requesting a Special Education evaluation</a>. <span class="italic">It is important to consider whether your child might have a learning disability.</span></li>
 	<li>I also recommend seeking the services of a mental health provider to consider other barriers, such as inattention, anxiety, or depression, that might be interfering with your child’s progress.</li>
 </ul>
 <h2 class="clear">Significant Risks with Few, if Any, Benefits</h2>
