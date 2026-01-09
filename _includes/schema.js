@@ -17,6 +17,7 @@
 "logo":"{{site.url}}/favicon.svg",
 "priceRange":"{{site.data.x.schema_priceRange}}",
 "image":{% if site.data.x.schema_images.size > 1 %}["{{site.data.x.schema_images|join:'","'}}"]{% else %}"{{site.data.x.schema_images}}"{% endif %},
+"image":{% if site.data.x.schema_images.size > 1 %}[{% endif %}{% for image in site.data.x.schema_images %}{% assign current = forloop.index0 %}{% assign w_set = site.data.x.schema_images_w[current] %}{% assign h_set = site.data.x.schema_images_h[current] %}{% for w in w_set %}{% assign current_set = forloop.index0 %}{% assign current_h = h_set[current_set] %}{"@type":"ImageObject","@id":"{{site.data.x.cache}}/{{image}}","url":"{{site.data.x.cache}}/{{w}}/{{image}}","width":"{{w}}","height":"{{current_h}}"}{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}{% endfor %}{% if page.header_w.size > 1 %}]{% endif %},
 "naics":"{{site.data.x.schema_naics}}",
 "medicalSpecialty":"https://schema.org/{{site.data.x.schema_medicalSpecialty}}",
 "telephone":"{{site.data.x.tel}}",
