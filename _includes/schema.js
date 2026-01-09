@@ -74,7 +74,7 @@
 	"name":"{{site.data.x.schema_hasCredential_name}}",
 	"credentialCategory":"{{site.data.x.schema_hasCredential_category}}",
 	"recognizedBy":{"@type":"Organization","name":"{{site.data.x.schema_hasCredential_recognizedBy}}"}},
-"image":"{{site.url}}/{{site.data.x.profilephoto}}",
+"image":[{"@type":"ImageObject","@id":"{{site.url}}/{{site.data.x.profilephoto}}","url":"{{site.url}}/{{site.data.x.profilephoto}}","width":"250","height":"250"},{"@type":"ImageObject","@id":"{{site.url}}/{{site.data.x.profilephoto}}","url":"{{site.data.x.cache}}/250/{{site.data.x.profilephoto}}","width":"250","height":"250"}],
 "identifier":{"@type":"PropertyValue","name":"NPI","value":"{{site.data.x.npi}}"},
 "hasOccupation":{"@type":"Occupation",
 	"name":"{{site.data.x.schema_hasCredential_name}}",
