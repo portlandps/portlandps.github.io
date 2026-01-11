@@ -53,7 +53,8 @@ a[href^="tel:"] span:last-child::after  {content:"‑"}
 span.slash{margin:0 .15em}{%comment%}
 /* main padding */ {%endcomment%}
 main{position:relative;z-index:9;margin:-2.625rem 0;padding:2.625rem max(1rem,env(safe-area-inset-right,0)) 2.625rem max(1rem,env(safe-area-inset-left,0))}
-main>div{margin:2.5rem auto 0;text-align:justify;line-height:1.25;container:clickable-main/inline-size;}
+main>div{margin:2.5rem auto 0;text-align:justify;line-height:1.25;container:clickable-main/inline-size;}{%comment%}
+@media(min-width:35rem){main>div{text-align:justify}}{%endcomment%}
 main>div>:last-child{margin-bottom:3rem}{% if page.header %}
 header{position:sticky;z-index:-1;top:0;top:env(safe-area-inset-top,0);background:light-dark(#090b2a,#090b2a);line-height:0}
 header>div{margin:0 auto;max-width:122.8125rem;}

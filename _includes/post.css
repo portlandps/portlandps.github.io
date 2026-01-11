@@ -6,8 +6,8 @@ h1 #subtitle{font-size:.875em;font-weight:normal}
 .timeago{margin:0 0 1rem;font-size:.875rem}
 .timeago+.timeago{margin-top:-.75rem}
 p{margin:0 0 1.25em}
-p,li{text-align:justify;line-height:1.25}
-@media(max-width:35rem){p,li{text-align:left}}
+p,li{text-align:left;line-height:1.25}
+@media(min-width:35rem){p,li{text-align:justify}}
 ul{padding-left:1.25rem}
 p.credits{line-height:1.25;font-size:.5rem;margin:.15rem 0 1rem;color:light-dark(#767676,#e0e0e0)}{% if page.aside %}
 aside p.credits{margin-bottom:0}{% endif %}
