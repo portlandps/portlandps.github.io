@@ -1,7 +1,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{% if page.layout == "post" %}{
 "@type":"BlogPosting",
 "headline":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
-"image":{% for w in page.header_w %}{% assign current = forloop.index0 %}{% assign current_h = page.header_h[current] %}{% if w >= 1200 %}{"@type":"ImageObject","@id":"{{site.data.x.cache}}/{{w}}/{{page.header}}","url":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","width":"{{w}}","height":"{{current_h}}"}{% break %}{% endif %}{% endfor %},
+"image":{% for w in page.header_w %}{% assign current = forloop.index0 %}{% assign current_h = page.header_h[current] %}{% if w >= 1200 %}{"@type":"ImageObject","@id":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","url":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","width":"{{w}}","height":"{{current_h}}"}{% break %}{% endif %}{% endfor %},
 "datePublished":"{{page.date|date:'%F'}}",
 "dateModified":"{{page.updated|date:'%F'}}",
 "author":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
