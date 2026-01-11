@@ -41,6 +41,7 @@ tel: "+1-503-928-4182"
 address: "6950 SW Hampton St Suite 207"
 # {{site.data.x.address}}
 # {{site.data.x.address|replace:'Suite','Ste'}}
+# {{site.data.x.address|replace:' ',' '}} for schema.org
 city: "Portland"
 # {{site.data.x.city}}
 state: "Oregon"
