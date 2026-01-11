@@ -31,9 +31,11 @@ span.FacultyGlyphic{font-size:.95em}{% endif %}{% if page.Tangerine %}
 /* light-dark Mode */ {%endcomment%}
 :root{color-scheme:light dark}
 html{background-color:#1a237e}
+main{background-color:#fff;color:#000}{%comment%}light-dark() Fallback{%endcomment%}
 main{background-color:light-dark(#fff,#090b2a);color:light-dark(#000,#e0e0e0)}{%comment%}
 /* Link Color */ {%endcomment%}
 a,abbr{text-decoration:none;color:inherit}
+main a{color:#008000}{%comment%}light-dark() Fallback{%endcomment%}
 main a{color:light-dark(#008000,#36f239)}
 a:hover,a:focus-visible{color:light-dark(#1a237e,#e0e0e0)}
 #bar>.menu a:hover,footer>.footer a:hover{color:inherit}{%comment%}
