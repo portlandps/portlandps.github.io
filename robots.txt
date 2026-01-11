@@ -5,6 +5,4 @@ Disallow: /success/
 Disallow: /A-Nation-Empowered-
 Disallow: /NASP-
 Disallow: /ODE-
-Disallow: /upload/
-Disallow: /Upload/
 Sitemap: {{site.url}}/sitemap.xml
