@@ -1,12 +1,13 @@
 main>div>div{max-width:50rem;margin:0 auto}
 h1{font-size:2rem;margin:0 0 2.5rem;color:light-dark(#1a237e,#e0e0e0)}
 h1 #subtitle{font-size:.875em;font-weight:normal}
-@media (min-width: 46rem) and (height >= {{46.0|times:page.header_h[0]|divided_by:page.header_w[0]|plus:7.0}}rem){
+@media(min-width:46rem) and (height >= {{46.0|times:page.header_h[0]|divided_by:page.header_w[0]|plus:7.0}}rem){
 	h1{position:absolute;top:{% if page.title_br and page.title_sub %}calc(-8rem - {{page.title_br.size|times:1.25}}em){% elsif page.title_br %}calc(-8rem - {{page.title_br.size|minus:1|times:1.25}}em){% elsif page.title_sub %}calc(-8rem - 1.25em){% else %}-8rem{% endif %};padding:.5rem 1rem;left:50%;transform:translateX(-50%);white-space:nowrap;background-color:rgb(26,35,126,.8);border-radius:.375rem;color:#fff}}
 .timeago{margin:0 0 1rem;font-size:.875rem}
 .timeago+.timeago{margin-top:-.75rem}
 p{margin:0 0 1.25em}
 p,li{text-align:justify;line-height:1.25}
+@media(max-width:35rem){p,li{text-align:left}
 ul{padding-left:1.25rem}
 p.credits{line-height:1.25;font-size:.5rem;margin:.15rem 0 1rem;color:light-dark(#767676,#e0e0e0)}{% if page.aside %}
 aside p.credits{margin-bottom:0}{% endif %}
