@@ -1,5 +1,5 @@
 ---
-published: TRUE
+published: true
 ---
 <?xml version="1.0" encoding="utf-8"?>{% assign posts = site.posts | sort: 'updated' | reverse %}
 <feed xmlns="http://www.w3.org/2005/Atom">
