@@ -35,7 +35,7 @@ main{background-color:light-dark(#fff,#090b2a);color:light-dark(#000,#e0e0e0)}{%
 /* Link Color */ {%endcomment%}
 a,abbr{text-decoration:none;color:inherit}
 main a{color:light-dark(#008000,#36f239)}
-a:hover,label:hover{color:light-dark(#1a237e,#e0e0e0)}
+a:hover,a:focus-visible{color:light-dark(#1a237e,#e0e0e0)}
 #bar>.menu a:hover,footer>.footer a:hover{color:inherit}{%comment%}
 /* Universal CSS */ {%endcomment%}
 html{overscroll-behavior:none;-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;scroll-padding-top:{% if page.url == "/articles/" %}calc(5.75rem + 2.5rem + env(safe-area-inset-top,0)){% else %}calc(5.75rem + 1rem + env(safe-area-inset-top,0)){% endif %}}
@@ -101,7 +101,7 @@ header>div>*{display:block;margin:0 auto;max-width:calc({% if page.layout == 'po
 /* .cta (in #bar & footer) */ {%endcomment%}
 .cta{background:none;display:flex;justify-content:center}
 .cta a{background:#1a237e;color:light-dark(#fff,#e0e0e0);font-size:1.25rem;padding:.55em;line-height:1}
-.cta a:hover{color:#36f239}
+.cta a:hover,.cta a:focus-visible{color:#36f239}
 #bar>.cta  {align-items:start}
 footer>.cta{align-items:end}
 #bar>.cta a  {border-radius:0 0 .9375rem .9375rem}
