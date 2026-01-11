@@ -27,7 +27,7 @@ abouturl: "/about-C-David-Maxey/"
 schema_sameAs_individual:
   - "https://www.linkedin.com/in/cdavidmaxey/"
 company: "Portland Psychological Services"
-company_alternate: "C. David Maxey, M.A."
+company_alternate:
 taxid: "82-5046774"
 npi: "1306234489"
 schema_BreadcrumbList_Home: "Home"

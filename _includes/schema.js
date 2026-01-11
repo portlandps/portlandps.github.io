@@ -8,8 +8,8 @@
 "publisher":{"@type":"MedicalClinic","@id":"{{site.url}}/"}
 },{% endif %}{
 "@type":"MedicalClinic","@id":"{{site.url}}/",
-"name":"{{site.data.x.company}}",
-"alternateName":"{{site.data.x.company_alternate}}",
+"name":"{{site.data.x.company}}",{% if site.data.x.company_alternate %}
+"alternateName":"{{site.data.x.company_alternate}}",{% endif %}
 "isAcceptingNewPatients":true,
 "taxID":"{{site.data.x.taxid}}",
 "url":"{{site.url}}/",
