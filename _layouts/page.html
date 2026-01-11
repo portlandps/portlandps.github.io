@@ -196,7 +196,7 @@ aside img{display:block;box-sizing: border-box}
 {% for w in site.data.x.schema_images_w[0] %}{% assign h = site.data.x.schema_images_h[0] %}{% assign current = forloop.index0 %}{% assign current_h = h[current] %}{% if w >= 1200 %}<meta property="og:image" content="{{site.data.x.cache}}/{{w}}/{{site.data.x.schema_images[0]}}"/>
 <meta property="og:image:width" content="{{w}}"/>
 <meta property="og:image:height" content="{{current_h}}"/>
-<meta property="og:image:alt" content="{{site.data.x.schema_images_alt}}"/>
+<meta property="og:image:alt" content="{{site.data.x.schema_images_alt[0]}}"/>
 <meta property="og:image:type" content="image/jpeg"/>{% break %}{% endif %}{% endfor %}{% endif %}
 <meta property="og:url" content="{{site.url}}{{page.url}}"/>
 <meta property="og:locale" content="en_US"/>
