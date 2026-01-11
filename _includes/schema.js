@@ -41,7 +41,7 @@
         "postalCode":"{{site.data.x.zip}}",
         "addressCountry":"{{site.data.x.country}}"}},
     {"@type":"VirtualLocation","name":"Zoom Call"}],
-"availableService":{% if site.data.x.schema_Services.size > 1 %}[{% endif %}{% for service in site.data.x.schema_Services %}{"@context":"https://schema.org",
+"availableService":{% if site.data.x.schema_Services.size > 1 %}[{% endif %}{% for service in site.data.x.schema_Services %}{
 	"@type":"{{service.type}}",
 	"name":"{{service.name}}",{% if service.alternateName %}
 	"alternateName":"{{service.alternateName}}",{% endif %}{% if service.url %}
