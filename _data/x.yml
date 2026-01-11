@@ -60,6 +60,9 @@ schema_images_w:
 schema_images_h:
   - [128,256,512,768,1024,1536]
   - [180,360,720,1080]
+schema_images_alt:
+  - "Office of C. David Maxey, M.A."
+  - "Street-View of Office"
 schema_hasMap:
   - "https://g.page/cdavidmaxey"
   - "https://www.google.com/maps?cid=14721185331632619489"
