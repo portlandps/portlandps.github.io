@@ -24,7 +24,7 @@ schema: "schema.js"
 tags:
 - Grade Placement
 css: |-
-  h2{margin:1.5em 0 .83333333em;font-size:1.5rem;font-weight:500;text-align:center;color:light-dark(#1a237e,#e0e0e0)}
+  h2{margin:1.5em 0 .83333333em;font-size:1.5rem;font-weight:500;text-align:center;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   h2:first-of-type{margin-top:0}
 ---
 <aside class="float-right">

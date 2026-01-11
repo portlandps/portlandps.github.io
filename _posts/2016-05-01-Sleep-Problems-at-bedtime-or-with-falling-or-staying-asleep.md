@@ -26,22 +26,22 @@ schema: "schema.js"
 tags:
 - Health
 css: |-
-  h2{margin:1.5em 0 .5em;font-size:1.5rem;font-weight:500;text-align:center;color:light-dark(#1a237e,#e0e0e0)}
+  h2{margin:1.5em 0 .5em;font-size:1.5rem;font-weight:500;text-align:center;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   h2:first-of-type{margin-top:0}
   p+ul{margin-top:-.875em}
   figure{margin:0}
-  figcaption{margin:0 0 .3333333333em;font-size:1.125rem;font-weight:500;text-align:left;color:light-dark(#1a237e,#e0e0e0)}
+  figcaption{margin:0 0 .3333333333em;font-size:1.125rem;font-weight:500;text-align:left;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   table{border-collapse:collapse;margin:0}
   thead{vertical-align:bottom}
   th{padding:0.1em .5em;font-weight:600}
-  tr:nth-child(even){background-color:light-dark(rgb(0,0,0,.05),transparent)}
+  tr:nth-child(even){background-color:rgb(0,0,0,.05);background-color:light-dark(rgb(0,0,0,.05),transparent)}
   td:nth-child(2){padding-left:.5em;text-align:right}
   td:nth-child(2).center{text-align:center}
   td:nth-child(3){width:.5em;padding:0}
   td:nth-child(4){padding-right:.5em;text-align:left}
   td:first-child span{font-size:.75em}
-  td{border-bottom:.0625rem solid light-dark(#000,#e0e0e0)}
-  thead,tbody{border-top:.125rem solid light-dark(#000,#e0e0e0);border-bottom:.125rem solid light-dark(#000,#e0e0e0)}
+  td{border-bottom:.0625rem solid #000;border-bottom:.0625rem solid light-dark(#000,#e0e0e0)}
+  thead,tbody{border-top:.125rem solid #000;border-top:.125rem solid light-dark(#000,#e0e0e0);border-bottom:.125rem solid #000;border-bottom:.125rem solid light-dark(#000,#e0e0e0)}
   sup{padding:0 .075rem}
   sup.footnote{font-weight:normal;font-size:.875em}
   .footnotes{font-size:.875em}
@@ -60,8 +60,8 @@ css: |-
 <table class="center" aria-labelledby="table-caption">
 	<thead>
 		<tr>
-			<th rowspan="2">Age&nbsp;Group</th>
-			<th rowspan="2" colspan="3">Recommended<br>Hours per&nbsp;Day</th>
+			<th rowspan="2" scope="col">Age&nbsp;Group</th>
+			<th rowspan="2" colspan="3" scope="col">Recommended<br>Hours per&nbsp;Day</th>
 		</tr>
 	</thead>
 	<tbody>

@@ -34,19 +34,19 @@ paper: true
 css: |-
   table{border-collapse:collapse}
   table h2{margin:0}
-  tr{border-bottom:.0625rem solid light-dark(#000,#e0e0e0)}
-  thead,tbody{border-bottom:.1875rem solid light-dark(#000,#e0e0e0)}
+  tr{border-bottom:.0625rem solid #000;border-bottom:.0625rem solid light-dark(#000,#e0e0e0)}
+  thead,tbody{border-bottom:.1875rem solid #000;border-bottom:.1875rem solid light-dark(#000,#e0e0e0)}
   th{vertical-align:bottom}
   td{vertical-align:top}
   th,td{padding:.5em}
   th,td>div:first-child{font-weight:bold;padding-bottom:.5em}
   td>div:nth-child(2){padding-left:1.5em}
-  tr:nth-child(even){background-color:light-dark(rgb(0,0,0,.05),transparent)}
+  tr:nth-child(even){background-color:rgb(0,0,0,.05);background-color:light-dark(rgb(0,0,0,.05),transparent)}
   table ul{list-style-type:disc}
   table ol{list-style-type:decimal}
   table ol,table ul{margin-block-start:.5em;margin-block-end:.5em;margin-inline-start:0;margin-inline-end:0;padding-inline-start:1.5em}
   table li{text-align:left}
-  h2{margin:1.5em 0 .83333333em;font-size:1.5rem;font-weight:500;text-align:center;color:light-dark(#1a237e,#e0e0e0)}
+  h2{margin:1.5em 0 .83333333em;font-size:1.5rem;font-weight:500;text-align:center;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   h2:first-of-type{margin-top:0}
   p+ul{margin-top:-.875em}
   @media(prefers-color-scheme:dark){#infographic{border:1rem solid #fff;margin:0 -1rem}}
