@@ -219,22 +219,22 @@ aside img{display:block;box-sizing: border-box}
         <a{% if page.url == '/contact/' %} class="active" onclick="m(false)"{% endif %} href="{{site.url}}/contact/{% if page.url == '/contact/' %}#{% endif %}">Contact</a>
         <a{% if page.url == '/articles/' %} class="active" onclick="m(false)"{% endif %} href="{{site.url}}/articles/{% if page.url == '/articles/' %}#{% endif %}">Articles</a>
         <button type="button" aria-label="Menu" id="menubutton" onclick="m()"><div></div><div></div><div></div></button>
-    </div></div>
+    </div></div>{% unless page.url == '/success/' %}
     <div class="cta">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-top-left"><path d="M16,16 L16,0 L0,0 A16,16 0 0,1 16,16 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-top-right"><path d="M0,16 L0,0 L16,0 A16,16 0 0,0 0,16 Z"/></svg>
-    </div>
+    </div>{% endunless %}
 </nav>
 <main><div>
 {{content}}
 </div></main>
-<footer>
+<footer>{% unless page.url == '/success/' %}
     <nav class="cta">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-bottom-left"><path d="M16,0 L16,16 L0,16 A16,16 0 0,0 16,0 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-bottom-right"><path d="M0,0 L0,16 L16,16 A16,16 0 0,1 0,0 Z"/></svg>
-    </nav>
+    </nav>{% endunless %}
     <nav class="footer center"><div>
         <div class="FacultyGlyphic">Portland Psychological&nbsp;Services</div>
         <div class="phone-email"><a href="tel:{{site.data.x.tel}}">{{site.data.x.tel|replace_first:"-","<span>"|replace_first:"-","</span><span>"|replace:"-","</span>"}}</a><br><span class="bullet">&bull;</span><a href="mailto:{{site.data.x.name|remove:','|uri_escape}}%20%3C{{site.data.x.email}}%3E">{{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'}}</a></div>
