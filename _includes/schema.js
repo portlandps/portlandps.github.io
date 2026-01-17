@@ -47,7 +47,8 @@
 	"alternateName":"{{service.alternateName}}",{% endif %}{% if service.url %}
 	"url":"{{service.url}}",{% endif %}{% if service.cpt %}
 	"code":{"@type":"MedicalCode","codeValue":"{{service.cpt}}","codingSystem":"CPT"},{% endif %}{% if service.relevantSpecialty %}
-	"relevantSpecialty":"https://schema.org/{{service.relevantSpecialty}}"}{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_Services.size > 1 %}]{% endif %},
+	"relevantSpecialty":"https://schema.org/{{service.relevantSpecialty}}",{% endif %}{% if service.description %}
+	"description":"{{service.description}}"{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_Services.size > 1 %}]{% endif %},
 "foundingDate":"{{site.data.x.schema_foundingDate}}",
 "founder":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
 "employee":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},

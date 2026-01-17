@@ -68,17 +68,61 @@ schema_hasMap:
   - "https://www.google.com/maps?cid=14721185331632619489"
 schema_Services:
   - type: "PsychologicalTreatment"
-    name: "Psychotherapy"
+    name: "Child & Adolescent Psychotherapy"
     alternateName: "Therapy"
     url:
     cpt: 90834
     relevantSpecialty: "Psychiatric"
+    description: "Therapy involves activities during sessions and “take-away” strategies to try outside of therapy. I primarily use Cognitive Behavioral Therapy (CBT), drawing from both classic and contemporary techniques that are supported by research."
+  - type: "PsychologicalTreatment"
+    name: "Psychotherapy for Young Adults"
+    alternateName: "Therapy"
+    url:
+    cpt: 90834
+    relevantSpecialty: "Psychiatric"
+    description: "Therapy involves activities during sessions and “take-away” strategies to try outside of therapy. I primarily use Cognitive Behavioral Therapy (CBT), drawing from both classic and contemporary techniques that are supported by research."
+  - type: "PsychologicalTreatment"
+    name: "Behavior Management"
+    alternateName: "Therapy"
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "Some children struggle even when parents use standard, generally accepted parenting practices. When your child needs behavior management strategies that fit with their individual difficulties, I partner with you to implement research-supported methods that align with your family’s values."
+  - type: "PsychologicalTreatment"
+    name: "Behavioral Interventions for Sleep Problems"
+    alternateName: "Therapy"
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "Cognitive Behavioral Therapy for Insomnia (CBT-I) is a behavioral treatment (without medications) strongly supported by research to help children experiencing persistent difficulties at bedtime or with falling or staying asleep."
+  - type: "PsychologicalTreatment"
+    name: "Organizational Skills Training"
+    alternateName: "Therapy"
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "Organizational Skills Training is a behavioral intervention strongly supported by research to strengthen organization, time management, and planning (OTMP) skills for children with ADHD to reduce their need for repeated reminders and improve their overall functioning in daily life."
   - type: "DiagnosticProcedure"
-    name: "Diagnostic Evaluation"
-    alternateName:
+    name: "Diagnostic Assessment"
+    alternateName: "Diagnostic Evaluation"
     url:
     cpt: 90791
     relevantSpecialty: "Psychiatric"
+    description: "Services begin with an initial assessment for a diagnosis (or provisional diagnosis) that helps establish the need for services and determine the focus of treatment or evaluation."	
+  - type: "DiagnosticProcedure"
+    name: "Psychological Evaluation"
+    alternateName:
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "Many times a diagnostic assessment clearly indicates the need for treatment, but sometimes it reveals the need for a more extensive evaluation to clarify the diagnosis or treatment needs. A psychological evaluation aims to give you the answers you need to take well-informed next steps."	
+  - type: "DiagnosticProcedure"
+    name: "ADHD Assessment"
+    alternateName:
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "If the initial diagnostic assessment for Attention-Deficit/Hyperactivity Disorder (ADHD) reveals a complex presentation (e.g., other conditions might better account for the symptoms), psychological evaluation and ADHD testing is needed to provide diagnostic clarity and treatment recommendations."	
 schema_currenciesAccepted:
   - "USD"
 schema_acceptedPaymentMethod:
