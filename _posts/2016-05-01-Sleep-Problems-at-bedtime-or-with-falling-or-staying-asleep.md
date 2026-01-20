@@ -24,7 +24,7 @@ header_h: [142,284,426,568,852,1136,1298]
 header_alt: "child reading a book in bed before going to sleep at bedtime"
 schema: "schema.js"
 tags:
-- Health
+- Sleep
 css: |-
   h2{margin:1.5em 0 .5em;font-size:1.5rem;font-weight:500;text-align:center;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   h2:first-of-type{margin-top:0}
