@@ -1,22 +1,17 @@
 {% if page.url == "/" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"{{site.data.x.company}}","url":"{{site.url}}{{page.url}}"}</script>
-{% endif %}<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{% if page.layout == "post" %}{
-"@type":"BlogPosting",
-"@id":"{{site.url}}{{page.url}}",
-"url":"{{site.url}}{{page.url}}",
+{% endif %}{% if page.layout == "post" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
 "headline":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
 "name":"{% if page.title_br %}{{page.title_br[0]|remove:":"}}{% else %}{{page.title}}{% endif %}",
 "image":{% for w in page.header_w %}{% assign current = forloop.index0 %}{% assign current_h = page.header_h[current] %}{% if w >= 1200 %}{"@type":"ImageObject","@id":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","url":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","width":"{{w}}","height":"{{current_h}}"}{% break %}{% endif %}{% endfor %},
 "datePublished":"{{page.date|date:'%F'}}",
 "dateModified":"{{page.updated|date:'%F'}}",
 "author":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
-"publisher":{"@type":"MedicalClinic","@id":"{{site.url}}/"}
-},{% endif %}{
-"@type":"MedicalClinic","@id":"{{site.url}}/",
+"publisher":{"@type":"MedicalClinic","@id":"{{site.url}}/"}}</script>
+{% endif %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","@id":"{{site.url}}/","url":"{{site.url}}/",
 "name":"{{site.data.x.company}}",{% if site.data.x.company_alternate %}
 "alternateName":"{{site.data.x.company_alternate}}",{% endif %}
 "isAcceptingNewPatients":true,
 "taxID":"{{site.data.x.taxid}}",
-"url":"{{site.url}}/",
 "sameAs":{% if site.data.x.schema_sameAs_organization.size > 1 %}["{{site.data.x.schema_sameAs_organization|join:'","'}}"]{% else %}"{{site.data.x.schema_sameAs_organization}}"{% endif %},
 "logo":"{{site.url}}/favicon.svg",
 "priceRange":"{{site.data.x.schema_priceRange}}",
@@ -59,7 +54,8 @@
 "currenciesAccepted":{% if site.data.x.schema_currenciesAccepted.size > 1 %}["{{site.data.x.schema_currenciesAccepted|join:','}}"]{% else %}"{{site.data.x.schema_currenciesAccepted}}"{% endif %},
 "acceptedPaymentMethod":{% if site.data.x.schema_acceptedPaymentMethod.size > 1 %}["{{site.data.x.schema_acceptedPaymentMethod|join:'","'}}"]{% else %}"{{site.data.x.schema_acceptedPaymentMethod}}"{% endif %},
 "openingHoursSpecification":{% if site.data.x.schema_OpeningHoursSpecification.size > 1 %}[{%endif%}{% for opening in site.data.x.schema_OpeningHoursSpecification %}{"@type": "OpeningHoursSpecification","dayOfWeek":{% if opening.days.size > 1 %}[{%endif%}{% for days in opening.days %}"https://schema.org/{{days}}"{% unless forloop.last %},{% endunless %}{% endfor %}{% if opening.days.size > 1 %}]{%endif%},"opens":"{{opening.opens}}","closes":"{{opening.closes}}","name":"{{opening.type}}"}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_OpeningHoursSpecification.size >1 %}]{%endif%}
-},{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}",
+}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}","url":"{{site.url}}{{site.data.x.abouturl}}",
 "name":"{{site.data.x.schema_person_name}}",
 "givenName":"{{site.data.x.schema_person_givenName}}",
 "familyName":"{{site.data.x.schema_person_familyName}}",
@@ -88,6 +84,5 @@
 		"codeValue":"{{site.data.x.schema_ONetCenter_code}}",
 		"name":"{{site.data.x.schema_ONetCenter_name}}"}},
 "worksFor":{"@type":"MedicalClinic","@id":"{{site.url}}/"},
-"url":"{{site.url}}{{site.data.x.abouturl}}",
 "sameAs":{% if site.data.x.schema_sameAs_individual.size > 1 %}["{{site.data.x.schema_sameAs_individual|join:'","'}}"]{% else %}"{{site.data.x.schema_sameAs_individual}}"{% endif %}
-}]}</script>
+}</script>
