@@ -1,4 +1,4 @@
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{% if page.layout == "post" %}{
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{% if page.url == "/" %}{"@type":"WebSite","name":"{{site.data.x.company}}","url":"{{site.url}}{{page.url}}"},{% endif %}{% if page.layout == "post" %}{
 "@type":"BlogPosting",
 "@id":"{{site.url}}{{page.url}}",
 "url":"{{site.url}}{{page.url}}",
