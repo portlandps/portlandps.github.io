@@ -1,3 +1,3 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"item":{"@id":"{{site.url}}/"}},
-{"@type":"ListItem","position":2,{% if page.url == "/about-C-David-Maxey/" %}"item":{"@id":"{{site.url}}{{page.url}}"}{% else %}"name":"{{page.breadcrumb}}","item":"{{site.url}}{{page.url}}"{% endif %}}]}</script>
+{"@type":"ListItem","position":1,"name":"{{site.data.x.company}}","item":{"@id":"{{site.url}}/"}},
+{"@type":"ListItem","position":2,"name":"{% if page.url == "/about-C-David-Maxey/" %}{{site.data.x.schema_person_name}}{% else %}{{page.breadcrumb}}{% endif %}","item":{% if page.url == "/about-C-David-Maxey/" %}{"@id":"{{site.url}}{{page.url}}"}{% else %}"{{site.url}}{{page.url}}"{% endif %}}]}</script>
