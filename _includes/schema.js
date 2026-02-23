@@ -1,13 +1,20 @@
-{% if page.url == "/" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"{{site.data.x.company}}","url":"{{site.url}}{{page.url}}"}</script>
-{% endif %}{% if page.layout == "post" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"{{site.url}}","url":"{{site.url}}{{page.url}}",
+"name":"{{site.data.x.company}}",
+"publisher":{"@id":"{{site.url}}/#Organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
+"name":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
+"description":"{{page.description}}",
+"inLanguage":"en-US",
+"isPartOf":{"@id":"{{site.url}}"}}</script>
+{% if page.layout == "post" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
 "headline":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
 "name":"{% if page.title_br %}{{page.title_br[0]|remove:":"}}{% else %}{{page.title}}{% endif %}",
 "image":{% for w in page.header_w %}{% assign current = forloop.index0 %}{% assign current_h = page.header_h[current] %}{% if w >= 1200 %}{"@type":"ImageObject","@id":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","url":"{{site.data.x.cache}}/{{w}}/{{page.header}}.avif","width":"{{w}}","height":"{{current_h}}"}{% break %}{% endif %}{% endfor %},
 "datePublished":"{{page.date|date:'%F'}}",
 "dateModified":"{{page.updated|date:'%F'}}",
-"author":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
-"publisher":{"@type":"MedicalClinic","@id":"{{site.url}}/"}}</script>
-{% endif %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","@id":"{{site.url}}/","url":"{{site.url}}/",
+"author":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
+"publisher":{"@id":"{{site.url}}/#Organization"}}</script>
+{% endif %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","@id":"{{site.url}}/#Organization","url":"{{site.url}}/",
 "name":"{{site.data.x.company}}",{% if site.data.x.company_alternate %}
 "alternateName":"{{site.data.x.company_alternate}}",{% endif %}
 "isAcceptingNewPatients":true,
@@ -49,20 +56,20 @@
 	"relevantSpecialty":"https://schema.org/{{service.relevantSpecialty}}",{% endif %}{% if service.description %}
 	"description":"{{service.description}}"{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_Services.size > 1 %}]{% endif %},
 "foundingDate":"{{site.data.x.schema_foundingDate}}",
-"founder":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
-"employee":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}"},
+"founder":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
+"employee":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
 "currenciesAccepted":{% if site.data.x.schema_currenciesAccepted.size > 1 %}["{{site.data.x.schema_currenciesAccepted|join:','}}"]{% else %}"{{site.data.x.schema_currenciesAccepted}}"{% endif %},
 "acceptedPaymentMethod":{% if site.data.x.schema_acceptedPaymentMethod.size > 1 %}["{{site.data.x.schema_acceptedPaymentMethod|join:'","'}}"]{% else %}"{{site.data.x.schema_acceptedPaymentMethod}}"{% endif %},
 "openingHoursSpecification":{% if site.data.x.schema_OpeningHoursSpecification.size > 1 %}[{%endif%}{% for opening in site.data.x.schema_OpeningHoursSpecification %}{"@type": "OpeningHoursSpecification","dayOfWeek":{% if opening.days.size > 1 %}[{%endif%}{% for days in opening.days %}"https://schema.org/{{days}}"{% unless forloop.last %},{% endunless %}{% endfor %}{% if opening.days.size > 1 %}]{%endif%},"opens":"{{opening.opens}}","closes":"{{opening.closes}}","name":"{{opening.type}}"}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_OpeningHoursSpecification.size >1 %}]{%endif%}
 }</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}","url":"{{site.url}}{{site.data.x.abouturl}}",
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person","url":"{{site.url}}{{site.data.x.abouturl}}",
 "name":"{{site.data.x.schema_person_name}}",
 "givenName":"{{site.data.x.schema_person_givenName}}",
 "familyName":"{{site.data.x.schema_person_familyName}}",
 "honorificSuffix":"{{site.data.x.schema_person_honorificSuffix}}",
 "alternateName":"{{site.data.x.schema_person_alternateName}}",
 "jobTitle":"{{site.data.x.schema_hasCredential_name}}",
-"affiliation":{"@type":"MedicalClinic","@id":"{{site.url}}/"},
+"affiliation":{"@id":"{{site.url}}/#Organization"},
 "address":{"@type":"PostalAddress",
     "streetAddress":"{{site.data.x.address|replace:' ',' '}}",
     "addressLocality":"{{site.data.x.city}}",
@@ -83,6 +90,6 @@
 		"inCodeSet":{"@type":"CategoryCodeSet","name":"O*Net-SOC","dateModified":"{{site.data.x.schema_ONetCenter_year}}","url":"https://www.onetcenter.org/"},
 		"codeValue":"{{site.data.x.schema_ONetCenter_code}}",
 		"name":"{{site.data.x.schema_ONetCenter_name}}"}},
-"worksFor":{"@type":"MedicalClinic","@id":"{{site.url}}/"},
+"worksFor":{"@id":"{{site.url}}/#Organization"},
 "sameAs":{% if site.data.x.schema_sameAs_individual.size > 1 %}["{{site.data.x.schema_sameAs_individual|join:'","'}}"]{% else %}"{{site.data.x.schema_sameAs_individual}}"{% endif %}
 }</script>
