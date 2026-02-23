@@ -1,11 +1,11 @@
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"{{site.url}}","url":"{{site.url}}{{page.url}}",
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"{{site.url}}/#WebSite","url":"{{site.url}}/",
 "name":"{{site.data.x.company}}",
 "publisher":{"@id":"{{site.url}}/#Organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
 "name":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
 "description":"{{page.description}}",
 "inLanguage":"en-US",
-"isPartOf":{"@id":"{{site.url}}"}}</script>
+"isPartOf":{"@id":"{{site.url}}/#WebSite"}}</script>
 {% if page.layout == "post" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
 "headline":"{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} {% endunless %}{% endfor %}{% if page.title_sub %} {{page.title_sub}}{% endif %}{% else %}{{page.title}}{% endif %}",
 "name":"{% if page.title_br %}{{page.title_br[0]|remove:":"}}{% else %}{{page.title}}{% endif %}",
