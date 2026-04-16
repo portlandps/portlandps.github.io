@@ -150,7 +150,7 @@ schema_OpeningHoursSpecification:
       - "Tuesday"
       - "Wednesday"
       - "Thursday"
-    opens:  "16:00:00"
+    opens:  "15:00:00"
     closes: "18:00:00"
 schema_itemOffered:
   - type: "Service"
@@ -161,8 +161,7 @@ schema_itemOffered:
           - "Tuesday"
           - "Wednesday"
           - "Thursday"
-          - "Friday"
-        opens:  "16:00:00"
+        opens:  "15:00:00"
         closes: "18:00:00"
   - type: "Service"
     name: "Therapy"
@@ -172,8 +171,7 @@ schema_itemOffered:
           - "Tuesday"
           - "Wednesday"
           - "Thursday"
-          - "Friday"
-        opens:  "16:00:00"
+        opens:  "15:00:00"
         closes: "18:00:00"
 schema_naics: "621330"
 schema_foundingDate: 2018
