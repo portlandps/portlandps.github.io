@@ -17,8 +17,9 @@
 {% endif %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","@id":"{{site.url}}/#Organization","url":"{{site.url}}/",
 "name":"{{site.data.x.company}}",{% if site.data.x.company_alternate %}
 "alternateName":"{{site.data.x.company_alternate}}",{% endif %}
-"isAcceptingNewPatients":true,
-"taxID":"{{site.data.x.taxid}}",
+"isAcceptingNewPatients":true,{% if site.data.x.taxid %}
+"taxID":"{{site.data.x.taxid}}",{% endif %}{% if site.data.x.duns %}
+"duns":"{{site.data.x.duns}}",{% endif %}
 "sameAs":{% if site.data.x.schema_sameAs_organization.size > 1 %}["{{site.data.x.schema_sameAs_organization|join:'","'}}"]{% else %}"{{site.data.x.schema_sameAs_organization}}"{% endif %},
 "logo":"{{site.url}}/favicon.svg",
 "priceRange":"{{site.data.x.schema_priceRange}}",

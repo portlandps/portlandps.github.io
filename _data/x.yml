@@ -30,6 +30,7 @@ company: "Portland Psychological Services"
 company_alternate:
 taxid: "82-5046774"
 npi: "1306234489"
+duns: "110912514"
 schema_BreadcrumbList_Home: "Home"
 # {{site.data.x.company}}
 # mailto:{{site.data.x.company|uri_escape}}%20%3C{{site.data.x.email}}%3E
