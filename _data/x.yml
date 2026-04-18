@@ -28,7 +28,7 @@ schema_sameAs_individual:
   - "https://www.linkedin.com/in/cdavidmaxey/"
 company: "Portland Psychological Services"
 company_alternate:
-taxid: "82-5046774"
+taxid: "825046774"
 npi: "1306234489"
 duns: "110912514"
 schema_BreadcrumbList_Home: "Home"
