@@ -16,11 +16,20 @@ css: |-
   fieldset{border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;padding:1.0rem 1.25rem 1.25rem;max-width:39.75rem;margin:2rem auto;background-color:light-dark(#f6f7fd,#1a237e)}
   fieldset legend{padding:.25rem .5rem;border-radius:.5rem;background-color:#1a237e;background-color:light-dark(#1a237e,#e0e0e0);text-align:left}
   fieldset legend h2{font-size:1.25rem;font-weight:500;margin:0;color:#fff;color:light-dark(#fff,#1a237e);text-align:center;}
-  fieldset div{font-size:1.125rem;margin:0 0 1.25rem;}
-  fieldset div:last-child{margin-bottom:0;}
+  fieldset>div{font-size:1.125rem;margin:0 0 1.25rem;}
+  fieldset>div:last-child{margin-bottom:0;}
   fieldset a{background-color:#3949ab;background-color:light-dark(#3949ab,#3949ab);color:light-dark(#fff,#e0e0e0);border:.0625rem solid #3949ab;border-color:light-dark(#3949ab,#e0e0e0);border-radius:.5rem;font-size:1.125rem;padding:.375rem .625rem}
   fieldset a:hover{color:#36f239;color:light-dark(#36f239,#36f239)}
   .fieldset-flex{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.5rem;}
+  form label:not([for]){display:block;margin:0 auto .1875rem;width:100%;font-weight:bold;text-align:left}
+  form>input:not([type='radio']){display:block}
+  form input:not([type='radio']){margin:0 auto 1rem;width:100%;padding:.5rem .5rem;border:#1a237e inset .0625rem;border-radius:.1875rem;box-sizing:border-box;font-size:1rem}
+  form input.input2{width:calc(50% - .25rem);box-sizing:border-box}
+  form input.input2+input.input2{margin-left:.5rem}
+  form button{display:block;margin:1.5rem auto 0;background-color:light-dark(#1a237e,white);color:light-dark(white,#1a237e);border:.0625rem solid light-dark(#1a237e,white);border-radius:.5rem;font-size:1.25rem;padding:.75rem 1.5rem}
+  #inputother{display:none;margin-top:.25rem;grid-column:span 2;}
+  #Radio_others:checked~#inputother{display:block}  
+  .radiogrid{display:grid;grid-template-columns:auto 1fr;gap:.75rem .3125rem;align-items:start;text-align:left;margin-top:.5rem}
 ---
 <h1 class="center">Next Steps</h1>
 <fieldset>
@@ -34,9 +43,35 @@ css: |-
 	<legend><h2>Complete Only Once</h2></legend>
 	<div class="fieldset-flex">
 		<a class="forms" href="https://forms.portlandpsychological.services/cdavidmaxey/form/Information/formperma/NxEhCgVCYrZdOKwZLpG9cWLZsslbd7RVFmrQzeRibdQ">Information Form</a>
-		<a class="forms" href="https://forms.portlandpsychological.services/cdavidmaxey/form/Insurance/formperma/QAHpE59gaGNWwBnnmE2FvZx0QIjtMwNjsm_GglYxOJA">Insurance Form</a>
 	</div>
-	<div>A parent completes these forms <span class="italic bold">only once</span>.</div>
+	<div>A parent completes this form <span class="italic bold">only once</span>.</div>
+</fieldset>
+<fieldset>
+	<legend><h2>Authorization Code</h2></legend>
+	<div>If you haven’t provided your Authorization Code for EAP, you can submit it here.</div>
+	<form action="https://forms.zohopublic.com/cdavidmaxey/form/AuthorizationCode/formperma/4YKSAOuQ5MDz2lm7lo4n5ZJNWKSe9LerQ2Osr6UetuM/htmlRecords/submit" name="form" id="form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" target="_blank">
+		<input type="hidden" name="zf_referrer_name" value="">{% comment %}To Track referrals , place the referrer name within the " " in the above hidden input field{% endcomment %}
+		<input type="hidden" name="zf_redirect_url" value="">{% comment %}To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field{% endcomment %}
+		<input type="hidden" name="zc_gad" value="">{% comment %}If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM{% endcomment %}
+		<label>Client’s Name</label>
+		<div>
+			<input class="input2" type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First Name" required id="Name_First"/><input class="input2" type="text" maxlength="255" name="Name_Last" fieldType=7 placeholder="Last Name" required id="Name_Last"/>
+		</div>
+		<label>Client’s Birthdate</label>
+		<input type="date" id="birthdate" required/>
+		<input type="hidden" name="Date" maxlength="25" id="date"/>
+		<label>Authorization Code</label>
+		<input  type="text" name="SingleLine" value="" fieldType=1 maxlength="255" placeholder="Authorization Code" required autocomplete="off"/>
+		<label>Insurance Company or Network</label>
+		<div class="radiogrid">
+			<input type="radio" id="Radio_1" name="Radio" value="United Health / United Behavioral Health / Optum / UMR" required onclick="other(false)"/>
+			<label for="Radio_1" >United&nbsp;Health / United&nbsp;Behavioral&nbsp;Health / Optum / UMR</label>
+			<input id="Radio_others" type="radio" value="zfs-others-zfs" name="Radio" required onclick="other(true)"/>
+			<label for="Radio_others">Other</label>
+			<input name="Radio_allow_others_text"  type="text" maxlength="150" id="inputother" autocomplete="off"/>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
 </fieldset>
 <fieldset>
 	<legend><h2>Signing Link emails</h2></legend>
