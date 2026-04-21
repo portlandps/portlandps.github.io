@@ -2,6 +2,12 @@
 ---
 User-agent: *
 Disallow: /success/
+Disallow: /c/
+Disallow: /y/
+Disallow: /a/
+Disallow: /ceap/
+Disallow: /yeap/
+Disallow: /aeap/
 Disallow: /A-Nation-Empowered-
 Disallow: /NASP-
 Disallow: /ODE-
