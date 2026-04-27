@@ -1,0 +1,1 @@
+timeAgo("{{page.date|date:'%F'}}","published");

@@ -1,0 +1,1 @@
+timeAgo("{{page.updated|date:'%F'}}","updated");
