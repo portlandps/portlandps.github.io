@@ -7,6 +7,11 @@ if(h&&h.length>1){
         if(successSVG){successSVG.style.display="block";}
     }
 	const hP=new URLSearchParams(h.substring(1));
+	const bST=hP.get("booking_start_time");
+    if(bST&&new Date()<new Date(bST)){
+		document.getElementById("concerns").hidden=false;
+		document.getElementById("concerns").disabled=false;
+		document.getElementById("concernsLabel").hidden=false;}
 	const cuF=hP.get("customer_first_name");
 	const cuL=hP.get("customer_last_name");
 	const cuE=hP.get("customer_email");
@@ -133,7 +138,7 @@ function age(){
 	e.required=isAdult;
 	e.placeholder=isAdult?"email":"email (optional)";
 	eO.hidden=isChild;
-	eO.disabled=isChild;
+	e.disabled=isChild;
 	pf.required=!isAdult;
 	pl.required=!isAdult;
 	pe.required=!isAdult;

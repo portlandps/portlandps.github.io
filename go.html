@@ -11,6 +11,7 @@ og: false
 schema:
 JS-hash-form: true
 css: |-
+  [hidden]{display:none!important;}
   h1{font-size:2.5rem;font-weight:normal;line-height:1.15;margin:0 auto 2rem;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   main p{max-width:40rem;margin:0 auto}
   main p{margin:0 auto 1.25em;font-size:1.125em}
@@ -20,7 +21,7 @@ css: |-
   form>fieldset>legend h2{font-size:1.25rem;font-weight:500;margin:0;color:#fff;color:light-dark(#fff,#1a237e);text-align:center;}
   .instructions:not(:empty){text-align:center;margin:.5rem 0 1.25rem;font-weight:bold;font-style:italic}
   form>input:not([type='radio']){display:block}
-  form input:not([type='radio']),select{margin:0 auto 1rem;width:100%;padding:.5rem .5rem;border:#1a237e solid .0625rem;border:light-dark(#1a237e,#e0e0e0) solid .0625rem;border-radius:.1875rem;box-sizing:border-box;font-size:1rem;background-color:white;background-color:light-dark(white,#2b2a33);color:black;color:light-dark(black,#e0e0e0);height:2.375rem}
+  form input:not([type='radio']),select,textarea{margin:0 auto 1rem;width:100%;padding:.5rem .5rem;border:#1a237e solid .0625rem;border:light-dark(#1a237e,#e0e0e0) solid .0625rem;border-radius:.1875rem;box-sizing:border-box;font-size:1rem;background-color:white;background-color:light-dark(white,#2b2a33);color:black;color:light-dark(black,#e0e0e0);height:2.375rem}
   form .names input{width:calc(50% - .25rem)}
   form .names input~input{margin-left:.5rem}
   form input[type='date']{appearance:none}
@@ -49,6 +50,7 @@ css: |-
   @keyframes grow-circle-bigger{50%{opacity:0.11;}100%{r:100;opacity:0;}}
   .check circle.semi-transparent{animation:grow-circle 0.45s cubic-bezier(0.66, 0.23, 0.51, 1.23) backwards,grow-circle-bigger 0.9s linear 1.1s forwards;}
   .check circle.colored{animation:grow-circle 0.5s cubic-bezier(0.66, 0.23, 0.51, 1.23) 0.25s backwards;}
+  textarea{height:auto;resize:vertical;field-sizing:content;min-height:8.25rem;font-family:inherit;font-size:inherit;}
 ---
 <div id="success">
 	<svg class="check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 214" id="check"><g fill="none" stroke="currentColor" stroke-width="2"><title>Checkmark Icon</title><circle class="semi-transparent" fill="currentColor" opacity="0.15" cx="107" cy="107" r="72"></circle><circle class="colored" fill="currentColor" cx="107" cy="107" r="72" opacity="1"></circle><polyline stroke="#fff" stroke-width="10" points="73.5,112.8 93.7,132.9 142.2,84.4" stroke-dasharray="50%,50%" stroke-dashoffset="100%" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
@@ -107,7 +109,7 @@ css: |-
 		<div id="eO">
 			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
 			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="email" inputmode="email" maxlength="255"/>
-			<div>For privacy reasons, using a work or school email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+			<div>A work or school email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 		</div>
 	</fieldset>
 	<fieldset>
@@ -135,7 +137,7 @@ css: |-
 		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="pe">email</label>
 		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
-		<div>For privacy reasons, using a work email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
 	<div id="parentsO">
 		<label for="parents">Client has</label>
@@ -165,7 +167,9 @@ css: |-
 		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="oe">email</label>
 		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
-		<div>For privacy reasons, using a work email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
+	<label id="concernsLabel" for="concerns" hidden>Why are you looking for services? What&nbsp;are&nbsp;your&nbsp;concerns?</label>
+	<textarea id="concerns" name="MultiLine" maxlength="65535" placeholder="Optional" autocorrect="on" spellcheck="true" autocapitalize="sentences" hidden disabled></textarea>
 	<button type="submit">Submit</button>
 </form>
