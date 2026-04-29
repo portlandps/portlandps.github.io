@@ -1,0 +1,170 @@
+---
+published: true
+layout: page
+title: "Quick Form"
+description: ""
+FacultyGlyphic: true
+Tangerine:
+RobotoCondensed:
+header:
+og: false
+schema:
+JS-hash-form: true
+css: |-
+  h1{font-size:2.5rem;font-weight:normal;line-height:1.15;margin:0 auto 2rem;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
+  main p{max-width:40rem;margin:0 auto}
+  main p{margin:0 auto 1.25em;font-size:1.125em}
+  form{margin:0 auto;max-width:40rem}
+  form>fieldset{border:.125rem solid #1a237e;border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;padding:1.0rem 1.25rem 1.25rem;max-width:39.75rem;margin:2rem auto;background-color:#f6f7fd;background-color:light-dark(#f6f7fd,#1a237e)}
+  form>fieldset>legend{padding:.25rem .5rem;border-radius:.5rem;background-color:#1a237e;background-color:light-dark(#1a237e,#e0e0e0);text-align:left}
+  form>fieldset>legend h2{font-size:1.25rem;font-weight:500;margin:0;color:#fff;color:light-dark(#fff,#1a237e);text-align:center;}
+  .instructions:not(:empty){text-align:center;margin:.5rem 0 1.25rem;font-weight:bold;font-style:italic}
+  form>input:not([type='radio']){display:block}
+  form input:not([type='radio']),select{margin:0 auto 1rem;width:100%;padding:.5rem .5rem;border:#1a237e solid .0625rem;border:light-dark(#1a237e,#e0e0e0) solid .0625rem;border-radius:.1875rem;box-sizing:border-box;font-size:1rem;background-color:white;background-color:light-dark(white,#2b2a33);color:black;color:light-dark(black,#e0e0e0);height:2.375rem}
+  form .names input{width:calc(50% - .25rem)}
+  form .names input~input{margin-left:.5rem}
+  form input[type='date']{appearance:none}
+  form input+div,select+div:not(:empty){margin:-.75rem 0 1rem;font-size:.75rem;font-style:italic}
+  form>fieldset>:last-child,form>fieldset>div>:last-child{margin-bottom:0}
+  form button{display:block;margin:1.5rem auto 0;background-color:#1a237e;background-color:light-dark(#1a237e,white);color:white;color:light-dark(white,#1a237e);border:.0625rem solid #1a237e;border:.0625rem solid light-dark(#1a237e,white);border-radius:.5rem;font-size:1.25rem;padding:.75rem 1.5rem}
+  #o{display:none;grid-column-start:2;}
+  #other:checked~#o{display:block}
+  fieldset.names{border:none;padding:0;margin:0;}
+  fieldset.names legend{display:block;margin:0 auto .1875rem;width:100%;font-weight:bold;text-align:left}
+  label{display:inline-block;margin:0 auto .1875rem;font-weight:bold;text-align:left}
+  label>span{font-weight:normal}
+  fieldset.names label,#inputotherlabel{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  .radiogrid{display:grid;grid-template-columns:auto 1fr;gap:.75rem .3125rem;align-items:start;text-align:left;margin:0 0 1.5rem}
+  .radiogrid label{margin:0 0 .1875rem;}
+  .ageequal{display:none}
+  #success{display:none}
+  #success>div{text-align:center;line-height:1;font-size:3rem;margin:0 0 2rem;font-weight:500}
+  #success>div+p{margin-bottom:4rem}
+  #success>div>span{display:block;line-height:1.35;margin-top:.35em;font-size:.5em;font-weight:normal}
+  #success>div>span>span{font-size:1.125rem}
+  .check{color:#17c964;display:block;padding-top:1.25rem;margin:-2.5rem auto .25rem;width:50cqw;height:50cqw;max-width:15rem;max-height:15rem}
+  @keyframes checkmark{0%{stroke-dashoffset:50%;}100%{stroke-dashoffset:0rem;}}
+  .check polyline{animation:checkmark 0.5s cubic-bezier(0.55, 0.2, 0.71, -0.04) 0.7s backwards;}
+  @keyframes grow-circle{0%{r:0;}}
+  @keyframes grow-circle-bigger{50%{opacity:0.11;}100%{r:100;opacity:0;}}
+  .check circle.semi-transparent{animation:grow-circle 0.45s cubic-bezier(0.66, 0.23, 0.51, 1.23) backwards,grow-circle-bigger 0.9s linear 1.1s forwards;}
+  .check circle.colored{animation:grow-circle 0.5s cubic-bezier(0.66, 0.23, 0.51, 1.23) 0.25s backwards;}
+---
+<div id="success">
+	<svg class="check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 214" id="check"><g fill="none" stroke="currentColor" stroke-width="2"><title>Checkmark Icon</title><circle class="semi-transparent" fill="currentColor" opacity="0.15" cx="107" cy="107" r="72"></circle><circle class="colored" fill="currentColor" cx="107" cy="107" r="72" opacity="1"></circle><polyline stroke="#fff" stroke-width="10" points="73.5,112.8 93.7,132.9 142.2,84.4" stroke-dasharray="50%,50%" stroke-dashoffset="100%" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+	<div>Scheduled <span>New Client Inquiry <br><span>(Phone Call | 10 minutes | Free)</span></span></div>
+	<p class="center">You will receive a calendar&nbsp;invite and an email with the phone&nbsp;call&nbsp;details.<br><br><strong>Please complete this one Quick&nbsp;Form&nbsp;below.</strong></p>
+</div>
+<h1 class="center">Quick Form</h1>
+<datalist id="insurance">
+	<option value="Kaiser Permanente"/>
+	<option value="Regence / BlueCross BlueShield"/>
+	<option value="Providence"/>
+	<option value="PacificSource"/>
+	<option value="Moda"/>
+	<option value="Cigna"/>
+	<option value="Aetna"/>
+</datalist>
+<form action="https://forms.zohopublic.com/cdavidmaxey/form/go/formperma/fF8ls4Y9prfhokfgWealLwNIbBR1IqCEmZKAiT7Ro3A/htmlRecords/submit" name="form" id="form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" autocorrect="off" spellcheck="false">
+	<input type="hidden" name="zf_referrer_name" value="">{% comment %}To Track referrals , place the referrer name within the " " in the above hidden input field{% endcomment %}
+	<input type="hidden" name="zf_redirect_url" value="">{% comment %}To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field{% endcomment %}
+	<input type="hidden" name="zc_gad" value="">{% comment %}If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM{% endcomment %}
+	<fieldset>
+		<legend><h2>Client</h2></legend>
+		<div class="instructions">For services that involve a child&nbsp;and&nbsp;parent, the&nbsp;child&nbsp;is&nbsp;the&nbsp;client.</div>
+		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="f">First Name</label><input type="text" id="f" name="Name_First" placeholder="First Name" required autocomplete="given-name" inputmode="text" maxlength="255"/><label for="l">Last Name</label><input type="text" id="l" name="Name_Last" placeholder="Last Name" required autocomplete="family-name" inputmode="text" maxlength="255"/>
+		</fieldset>
+		<label for="n">Preferred Name</label>
+		<input  type="text" id="n" name="SingleLine" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<label for="b">Birthdate</label>
+		<div id="ageequal" class="float-right">Age = <span id="age"></span></div>
+		<input type="date" id="b" required autocomplete="bday" max="2099-12-31" min="1900-01-01"/>
+		<input type="hidden" id="date" name="Date" maxlength="25"/>
+		<input type="hidden" id="gy" name="Number">
+		<label for="g">Current Grade in School</label>
+		<select name="Dropdown" id="g" required>
+			<option id="gD" value="Daycare (too young for school)">Daycare (too young for school)</option>
+			<option id="gP" value="Pre-K">Pre-K</option>
+			<option id="gK" value="Kindergarten">Kindergarten</option>
+			<option id="g1" value="1st Grade">1<sup>st</sup> Grade</option>
+			<option id="g2" value="2nd Grade">2nd Grade</option>
+			<option id="g3" value="3rd Grade">3rd Grade</option>
+			<option id="g4" value="4th Grade">4th Grade</option>
+			<option id="g5" value="5th Grade">5th Grade</option>
+			<option id="g6" value="6th Grade">6th Grade</option>
+			<option id="g7" value="7th Grade">7th Grade</option>
+			<option id="g8" value="8th Grade">8th Grade</option>
+			<option id="g9" value="9th Grade">9th Grade</option>
+			<option id="g10" value="10th Grade">10th Grade</option>
+			<option id="g11" value="11th Grade">11th Grade</option>
+			<option id="g12" value="12th Grade">12th Grade</option>
+			<option id="gC" value="College">College</option>
+			<option id="gN" value="Not in School">Not in School</option>
+			<option value="" disabled selected hidden></option>
+		</select>
+		<div id="summer"></div>
+		<div id="eO">
+			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
+			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="email" inputmode="email" maxlength="255"/>
+			<div>For privacy reasons, using a work or school email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend><h2>Insurance Company or&nbsp;Network</h2></legend>
+		<div class="radiogrid">
+			<input type="radio" id="United" name="Radio" value="United Health / Optum" required onclick="showother(false)"/>
+			<label for="United" >United&nbsp;Health / Optum</label>
+			<input type="radio" id="no" name="Radio" value="Not Using Insurance" required onclick="showother(false)"/>
+			<label for="no" >Not Using Insurance</label>
+			<input type="radio" id="other" name="Radio" value="zfs-others-zfs" required onclick="showother(true)"/>
+			<label for="other">Other Insurance (Out-of-Network)</label>
+			<label id="inputotherlabel" for="o">Other Insurance</label>
+			<input type="text" id="o" name="Radio_allow_others_text" placeholder="Other Insurance" required autocomplete="off" maxlength="150" list="insurance" disabled/>
+		</div>
+		<label for="a">Authorization Code</label>
+		<input type="text" id="a" name="SingleLine1" placeholder="Authorization Code" autocomplete="off" maxlength="255"/>
+		<div>Authorization is usually unnecessary.</div>
+	</fieldset>
+	<fieldset id="parent">
+		<legend><h2>Parent<span id="parentOptional"></span></h2></legend>
+		<div class="instructions" id="pay"></div>
+		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="pf">First Name</label><input type="text" id="pf" name="Name1_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="pl">Last Name</label><input type="text" id="pl" name="Name1_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
+		</fieldset>
+		<label for="pn">Preferred Name</label>
+		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<label for="pe">email</label>
+		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
+		<div>For privacy reasons, using a work email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+	</fieldset>
+	<div id="parentsO">
+		<label for="parents">Client has</label>
+		<select name="Dropdown1" id="parents" required>
+			<option value="another parent." selected>another parent.</option>
+			<option value="another parent who is now deceased.">another parent who is&nbsp;now&nbsp;deceased.</option>
+			<option value="never had another parent.">never had another parent.</option>
+			<option value="a parental situation not listed above.">a parental situation not listed above.</option>
+		</select>
+	</div>{%comment%}
+	<label>Client has</label>
+	<div class="radiogrid">
+		<input type="radio" id="Radio1_1" name="Radio1" value="1" required checked/>
+		<label for="Radio1_1" >another parent.</label>
+		<input type="radio" id="Radio1_2" name="Radio1" value="x" required/>
+		<label for="Radio1_2" >another parent who is&nbsp;now&nbsp;deceased.</label>
+		<input type="radio" id="Radio1_3" name="Radio1" value="0" required/>
+		<label for="Radio1_3" >never had another parent.</label>
+		<input type="radio" id="Radio1_4" name="Radio1" value="o" required/>
+		<label for="Radio1_4" >a parental situation not&nbsp;listed&nbsp;above.</label>
+	</div>{%endcomment%}
+	<fieldset id="another">
+		<legend><h2>Other Parent<span id="anotherOptional"></span></h2></legend>
+		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="of">First Name</label><input type="text" id="of" name="Name2_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="ol">Last Name</label><input type="text" id="ol" name="Name2_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
+		</fieldset>
+		<label for="on">Preferred Name</label>
+		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<label for="oe">email</label>
+		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
+		<div>For privacy reasons, using a work email address is not recommended. By emailing or otherwise providing an email address (on any forms, etc.), you authorize email communication of protected health information.</div>
+	</fieldset>
+	<button type="submit">Submit</button>
+</form>
