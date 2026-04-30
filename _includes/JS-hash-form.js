@@ -12,11 +12,11 @@ if(h&&h.length>1){
 		document.getElementById("concerns").hidden=false;
 		document.getElementById("concerns").disabled=false;
 		document.getElementById("concernsLabel").hidden=false;}
-	const cuF=hP.get("customer_first_name");
-	const cuL=hP.get("customer_last_name");
-	const cuE=hP.get("customer_email");
-	const clF=hP.get("Client's_Legal_First_Name_(Child\u00A0or\u00A0Young\u00A0Adult)");
-	const clL=hP.get("Client's_Legal_Last_Name_(Child\u00A0or\u00A0Young\u00A0Adult)");
+	const cuF=hP.get("customer_first_name")||hP.get("bf");
+	const cuL=hP.get("customer_last_name")||hP.get("bl");
+	const cuE=hP.get("customer_email")||hP.get("be");
+	const clF=hP.get("Client's_Legal_First_Name_(Child\u00A0or\u00A0Young\u00A0Adult)")||hP.get("cf");
+	const clL=hP.get("Client's_Legal_Last_Name_(Child\u00A0or\u00A0Young\u00A0Adult)")||hP.get("cl");
 	if(cuF!==null||cuL!==null||cuE!==null){
 		if(cuF===clF&&cuL===clL){
 			if(cuF){
