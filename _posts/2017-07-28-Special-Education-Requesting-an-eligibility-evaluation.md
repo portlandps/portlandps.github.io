@@ -27,7 +27,7 @@ header_f: [320,640,960,1280,1920,2560,3840]
 header_w: [320,640,960,1280,1920,2560,3840]
 header_h: [143,286,429,572,858,1144,1716]
 header_alt: "students learning in a small group at school"
-schema: "schema.js"
+schema: "schema.json"
 tags:
 - Special Education & 504
 paper: true

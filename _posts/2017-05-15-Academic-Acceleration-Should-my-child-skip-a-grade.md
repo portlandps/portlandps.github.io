@@ -20,7 +20,7 @@ header_f: [320,640,960,1280,1920,2560,3840]
 header_w: [320,640,960,1280,1920,2560,3840]
 header_h: [146,292,438,584,876,1168,1752]
 header_alt: "student working at the board in an immersion school"
-schema: "schema.js"
+schema: "schema.json"
 tags:
 - Grade Placement
 css: |-

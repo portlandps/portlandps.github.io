@@ -22,7 +22,7 @@ header_f: [320,640,960,1280,1920,2560,2925]
 header_w: [320,640,960,1280,1920,2560,2925]
 header_h: [142,284,426,568,852,1136,1298]
 header_alt: "child reading a book in bed before going to sleep at bedtime"
-schema: "schema.js"
+schema: "schema.json"
 tags:
 - Sleep
 css: |-

@@ -9,14 +9,14 @@ RobotoCondensed:
 header:
 og: false
 schema:
-JS-hash-form: true
+JS-hash-go: true
 css: |-
   [hidden]{display:none!important;}
   h1{font-size:2.5rem;font-weight:normal;line-height:1.15;margin:0 auto 2rem;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   main p{max-width:40rem;margin:0 auto}
   main p{margin:0 auto 1.25em;font-size:1.125em}
   form{margin:0 auto;max-width:40rem}
-  form>fieldset{border:.125rem solid #1a237e;border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;padding:1.0rem 1.25rem 1.25rem;max-width:39.75rem;margin:2rem auto;background-color:#f6f7fd;background-color:light-dark(#f6f7fd,#1a237e)}
+  form>fieldset{border:.125rem solid #1a237e;border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;padding:1.0rem 1.25rem .25rem;max-width:39.75rem;margin:2rem auto;background-color:#f6f7fd;background-color:light-dark(#f6f7fd,#1a237e)}
   form>fieldset>legend{padding:.25rem .5rem;border-radius:.5rem;background-color:#1a237e;background-color:light-dark(#1a237e,#e0e0e0);text-align:left}
   form>fieldset>legend h2{font-size:1.25rem;font-weight:500;margin:0;color:#fff;color:light-dark(#fff,#1a237e);text-align:center;}
   .instructions:not(:empty){text-align:center;margin:.5rem 0 1.25rem;font-weight:bold;font-style:italic}
@@ -26,7 +26,7 @@ css: |-
   form .names input~input{margin-left:.5rem}
   form input[type='date']{appearance:none}
   form input+div,select+div:not(:empty){margin:-.75rem 0 1rem;font-size:.75rem;font-style:italic}
-  form>fieldset>:last-child,form>fieldset>div>:last-child{margin-bottom:0}
+  form>fieldset>div>input:last-child{margin-bottom:0}
   form button{display:block;margin:1.5rem auto 0;background-color:#1a237e;background-color:light-dark(#1a237e,white);color:white;color:light-dark(white,#1a237e);border:.0625rem solid #1a237e;border:.0625rem solid light-dark(#1a237e,white);border-radius:.5rem;font-size:1.25rem;padding:.75rem 1.5rem}
   #o{display:none;grid-column-start:2;}
   #other:checked~#o{display:block}
@@ -75,22 +75,22 @@ css: |-
 	<fieldset>
 		<legend><h2>Client</h2></legend>
 		<div class="instructions">For services that involve a child&nbsp;and&nbsp;parent, the&nbsp;child&nbsp;is&nbsp;the&nbsp;client.</div>
-		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="f">First Name</label><input type="text" id="f" name="Name_First" placeholder="First Name" required autocomplete="given-name" inputmode="text" maxlength="255"/><label for="l">Last Name</label><input type="text" id="l" name="Name_Last" placeholder="Last Name" required autocomplete="family-name" inputmode="text" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Client’s Legal Name</legend><label for="f">First Name</label><input type="text" id="f" name="Name_First" placeholder="First Name" required autocomplete="given-name" inputmode="text" maxlength="255"/><label for="l">Last Name</label><input type="text" id="l" name="Name_Last" placeholder="Last Name" required autocomplete="family-name" inputmode="text" maxlength="255"/>
 		</fieldset>
-		<label for="n">Preferred Name</label>
+		<label for="n">Client’s Preferred Name</label>
 		<input  type="text" id="n" name="SingleLine" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
-		<label for="b">Birthdate</label>
+		<label for="b">Client’s Birthdate</label>
 		<div id="ageequal" class="float-right">Age = <span id="age"></span></div>
 		<input type="date" id="b" required autocomplete="bday" max="2099-12-31" min="1900-01-01"/>
 		<input type="hidden" id="date" name="Date" maxlength="25"/>
 		<input type="hidden" id="gy" name="Number">
-		<label for="g">Current Grade in School</label>
+		<label for="g">Client’s Current Grade in School</label>
 		<select name="Dropdown" id="g" required>
 			<option value="" disabled selected hidden></option>
 			<option id="gD" value="Daycare (too young for school)">Daycare (too young for school)</option>
 			<option id="gP" value="Pre-K">Pre-K</option>
-			<option id="gK" value="Kindergarten">Kindergarten</option>
-			<option id="g1" value="1st Grade">1<sup>st</sup> Grade</option>
+			<option id="g0" value="Kindergarten">Kindergarten</option>
+			<option id="g1" value="1st Grade">1st Grade</option>
 			<option id="g2" value="2nd Grade">2nd Grade</option>
 			<option id="g3" value="3rd Grade">3rd Grade</option>
 			<option id="g4" value="4th Grade">4th Grade</option>
@@ -106,8 +106,8 @@ css: |-
 			<option id="gN" value="Not in School">Not in School</option>
 		</select>
 		<div id="summer"></div>
-		<div id="eO">
-			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
+		<div id="e_">
+			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
 			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="email" inputmode="email" maxlength="255"/>
 			<div>A work or school email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 		</div>
@@ -120,7 +120,7 @@ css: |-
 			<input type="radio" id="no" name="Radio" value="Not Using Insurance" required onclick="showother(false)"/>
 			<label for="no" >Not Using Insurance</label>
 			<input type="radio" id="other" name="Radio" value="zfs-others-zfs" required onclick="showother(true)"/>
-			<label for="other">Other Insurance (Out-of-Network)</label>
+			<label for="other">Other Insurance<span> (Out‑of‑Network)</span></label>
 			<label id="inputotherlabel" for="o">Other Insurance</label>
 			<input type="text" id="o" name="Radio_allow_others_text" placeholder="Other Insurance" required autocomplete="off" maxlength="150" list="insurance" disabled/>
 		</div>
@@ -131,17 +131,17 @@ css: |-
 	<fieldset id="parent">
 		<legend><h2>Parent<span id="parentOptional"></span></h2></legend>
 		<div class="instructions" id="pay"></div>
-		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="pf">First Name</label><input type="text" id="pf" name="Name1_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="pl">Last Name</label><input type="text" id="pl" name="Name1_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Parent’s Legal Name</legend><label for="pf">First Name</label><input type="text" id="pf" name="Name1_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="pl">Last Name</label><input type="text" id="pl" name="Name1_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
 		</fieldset>
-		<label for="pn">Preferred Name</label>
+		<label for="pn">Parent’s Preferred Name</label>
 		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
-		<label for="pe">email</label>
+		<label for="pe">Parent’s email</label>
 		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
 		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
-	<div id="parentsO">
-		<label for="parents">Client has</label>
-		<select name="Dropdown1" id="parents" required>
+	<div id="p_">
+		<label for="p">The client has</label>
+		<select name="Dropdown1" id="p" required>
 			<option value="another parent." selected>another parent.</option>
 			<option value="another parent who is now deceased.">another parent who is&nbsp;now&nbsp;deceased.</option>
 			<option value="never had another parent.">never had another parent.</option>
@@ -161,15 +161,15 @@ css: |-
 	</div>{%endcomment%}
 	<fieldset id="another">
 		<legend><h2>Other Parent<span id="anotherOptional"></span></h2></legend>
-		<fieldset class="names" autocapitalize="words"><legend>Legal Name</legend><label for="of">First Name</label><input type="text" id="of" name="Name2_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="ol">Last Name</label><input type="text" id="ol" name="Name2_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Other Parent’s Legal Name</legend><label for="of">First Name</label><input type="text" id="of" name="Name2_First" placeholder="First Name" required autocomplete="given-name" maxlength="255"/><label for="ol">Last Name</label><input type="text" id="ol" name="Name2_Last" placeholder="Last Name" required autocomplete="family-name" maxlength="255"/>
 		</fieldset>
-		<label for="on">Preferred Name</label>
+		<label for="on">Other Parent’s Preferred Name</label>
 		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
-		<label for="oe">email</label>
+		<label for="oe">Other Parent’s email</label>
 		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="email" inputmode="email" maxlength="255"/>
 		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
-	<label id="concernsLabel" for="concerns" hidden>Why are you looking for services? What&nbsp;are&nbsp;your&nbsp;concerns?</label>
-	<textarea id="concerns" name="MultiLine" maxlength="65535" placeholder="Optional" autocorrect="on" spellcheck="true" autocapitalize="sentences" hidden disabled></textarea>
+	<label id="concernsLabel" for="concerns">Why are you looking for services? What&nbsp;are&nbsp;your&nbsp;concerns?</label>
+	<textarea id="concerns" name="MultiLine" maxlength="65535" placeholder="Optional" autocorrect="on" spellcheck="true" autocapitalize="sentences"></textarea>
 	<button type="submit">Submit</button>
 </form>

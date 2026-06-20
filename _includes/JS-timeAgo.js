@@ -6,4 +6,4 @@ function timeAgo(date,id){
 	else if(months>1){i.textContent=months+" months ago";}
 	else if(months===1){i.textContent="a month ago";}
 	else{i.textContent="less than a month ago";}
-};
+}

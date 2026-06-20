@@ -20,7 +20,7 @@ header_f: [320,640,960,1280,1920,2560,3840]
 header_w: [320,640,960,1280,1920,2560,3840]
 header_h: [136,272,408,544,816,1088,1632]
 header_alt: "student taller than classmates"
-schema: "schema.js"
+schema: "schema.json"
 tags:
 - Special Education & 504
 - Grade Placement
