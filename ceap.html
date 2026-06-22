@@ -37,51 +37,24 @@ css: |-
 <fieldset>
 	<legend><h2>Each Parent Completes</h2></legend>
 	<div class="fieldset-flex">
-		<a data-p href="https://forms.portlandpsychological.services/cdavidmaxey/form/ParentQuestionnaireEAP/formperma/KVgfw06e3_QKwv6EIEpFSfa363w-jQqphPK_R0AHuGw">Parent Questionnaire</a>
+		<a data-p="f,l,b" href="https://forms.portlandpsychological.services/cdavidmaxey/form/ParentQuestionnaireEAP/formperma/KVgfw06e3_QKwv6EIEpFSfa363w-jQqphPK_R0AHuGw">Parent Questionnaire</a>
 	</div>
 	<div>If more than one parent wants to complete this questionnaire, <span class="italic bold">each parent should complete it separately</span>, as it is not designed for parents to complete it together.</div>
 </fieldset>
 <fieldset>
 	<legend><h2>Complete Only Once</h2></legend>
 	<div class="fieldset-flex">
-		<a data-p href="https://forms.portlandpsychological.services/cdavidmaxey/form/InformationForm/formperma/pSgIPBMeyh-H6VNgUVia8juXkphIKr9GMj54ToOTNhA">Information Form</a>
+		<a data-p="f,l,n,b,g,e,pf,pl,pn,pe,of,ol,on,oe" href="https://forms.portlandpsychological.services/cdavidmaxey/form/InformationForm/formperma/pSgIPBMeyh-H6VNgUVia8juXkphIKr9GMj54ToOTNhA">Information Form</a>
 	</div>
 	<div>This form is to be completed <span class="italic bold">only once</span> and by a parent.</div>
-</fieldset>{%comment%}
-<fieldset>
-	<legend><h2>Authorization Code</h2></legend>
-	<div>If you haven’t provided your Authorization Code for EAP, you can submit it here.</div>
-	<form action="https://forms.zohopublic.com/cdavidmaxey/form/AuthorizationCode/formperma/4YKSAOuQ5MDz2lm7lo4n5ZJNWKSe9LerQ2Osr6UetuM/htmlRecords/submit" name="form" id="form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" target="_blank">
-		<input type="hidden" name="zf_referrer_name" value="">{% comment %}To Track referrals , place the referrer name within the " " in the above hidden input field{% endcomment %}
-		<input type="hidden" name="zf_redirect_url" value="">{% comment %}To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field{% endcomment %}
-		<input type="hidden" name="zc_gad" value="">{% comment %}If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM{% endcomment %}
-		<label>Client’s Name</label>
-		<div>
-			<input class="input2" type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First Name" required id="Name_First"/><input class="input2" type="text" maxlength="255" name="Name_Last" fieldType=7 placeholder="Last Name" required id="Name_Last"/>
-		</div>
-		<label>Client’s Birthdate</label>
-		<input type="date" id="birthdate" required/>
-		<input type="hidden" name="Date" maxlength="25" id="date"/>
-		<label>Authorization Code</label>
-		<input  type="text" name="SingleLine" value="" fieldType=1 maxlength="255" placeholder="Authorization Code" required autocomplete="off"/>
-		<label>Insurance Company or Network</label>
-		<div class="radiogrid">
-			<input type="radio" id="Radio_1" name="Radio" value="United Health / United Behavioral Health / Optum / UMR" required onclick="other(false)"/>
-			<label for="Radio_1" >United&nbsp;Health / United&nbsp;Behavioral&nbsp;Health / Optum / UMR</label>
-			<input id="Radio_others" type="radio" value="zfs-others-zfs" name="Radio" required onclick="other(true)"/>
-			<label for="Radio_others">Other</label>
-			<input name="Radio_allow_others_text"  type="text" maxlength="150" id="inputother" autocomplete="off"/>
-		</div>
-		<button type="submit">Submit</button>
-	</form>
-</fieldset>{%endcomment%}
-<fieldset>
-	<legend><h2>Signing Link emails</h2></legend>
-	<div>Sometime before the first appointment, each parent will receive an email from notifications@zohosign.com with a link to sign the Informed Consent Agreement.</div>
 </fieldset>
 <fieldset>
 	<legend><h2>Calendar Invites</h2></legend>
 	<div>I typically send calendar invites for appointments.</div>
 	<div><span class="italic bold">The first appointment is for parents only</span> (without the client or other children) to gather a wide variety of information (e.g., developmental history) and discuss your goals for services openly. <span class="italic bold">If the items above are not completed, we won’t be able to proceed with the first appointment.</span></div>
 	<div>The next appointment is with your child to hear your child’s perspective and discuss the goals your child is motivated to work toward.</div>
+</fieldset>
+<fieldset>
+	<legend><h2>Signing Link emails</h2></legend>
+	<div>Sometime before the first appointment, each parent will receive an email from notifications@zohosign.com with a link to sign the Informed Consent Agreement. <span class="italic bold">If this can’t be signed before or at the beginning of the first appointment, we won’t be able to proceed with the first appointment.</span></div>
 </fieldset>
