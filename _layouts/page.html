@@ -152,7 +152,9 @@ aside img{display:block;box-sizing: border-box}
 .bookborder{border:.0625rem solid #000;border-bottom-color:#3949ab}
 @media(prefers-color-scheme:dark){.bookborder{border:none}}
 .booktopper{text-align:center;width:8.625rem;border-top-left-radius:.25em;border-top-right-radius:.25em;background:#3949ab;color:#fff;padding:.175rem 0}
-.booktopper+a .bookborder{border-top:none}{% endif %}{% if page.layout == "post" %}
+.booktopper+a .bookborder{border-top:none}{% endif %}{% if page.toast %}
+#toast{visibility:hidden;background-color:#1a237e;background-color:light-dark(#1a237e,#3949ab);color:#fff;text-align:center;border:#fff 2px solid;border-radius:.5rem;padding:.75rem 1.5rem;position:fixed;z-index:9999;left:50%;bottom:2rem;transform:translateX(-50%);box-shadow:0 4px 6px rgba(0,0,0,0.2);opacity:0;transition:opacity 0.3s ease,visibility 0.3s ease;pointer-events:none;}
+#toast.show{visibility:visible;opacity:1;}{% endif %}{% if page.layout == "post" %}
 {% include post.css %}{% endif %}{% if page.css %}
 {{page.css}}{% endif %}{% if page.url == "/articles/" %}
 {% for tag in site.tags %}#{{ tag[0] | slugify }}:target~#a>a:not(.{{ tag[0] | slugify }}){% unless forloop.last %},{% endunless %}{% endfor %}{display:none}
@@ -219,7 +221,7 @@ aside img{display:block;box-sizing: border-box}
         <a{% if page.url == '/contact/' %} class="active" onclick="m(false)"{% endif %} href="{{site.url}}/contact/{% if page.url == '/contact/' %}#{% endif %}">Contact</a>
         <a{% if page.url == '/articles/' %} class="active" onclick="m(false)"{% endif %} href="{{site.url}}/articles/{% if page.url == '/articles/' %}#{% endif %}">Articles</a>
         <button type="button" aria-label="Menu" id="menubutton" onclick="m()"><div></div><div></div><div></div></button>
-    </div></div>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' %}
+    </div></div>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' or page.url == '/ca/' or page.url == '/ya/' or page.url == '/aa/' %}
     <div class="cta">
         <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-top-left"><path d="M16,16 L16,0 L0,0 A16,16 0 0,1 16,16 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
@@ -229,7 +231,7 @@ aside img{display:block;box-sizing: border-box}
 <main><div>
 {{content}}
 </div></main>
-<footer>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' %}
+<footer>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' or page.url == '/ca/' or page.url == '/ya/' or page.url == '/aa/' %}
     <nav class="cta">
         <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="inverted-radius-bottom-left"><path d="M16,0 L16,16 L0,16 A16,16 0 0,0 16,0 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
@@ -242,6 +244,7 @@ aside img{display:block;box-sizing: border-box}
 		<div id="copyright-notice">&copy;&nbsp;<span id="y">{{ "now" | date: "%Y" }}</span> <span class="FacultyGlyphic">Portland&nbsp;Psychological&nbsp;Services</span></div>
     </div></nav>
 </footer>{% capture JS-menu %}{% include JS-menu.js %}{% endcapture %}{% capture JS-success %}{% include JS-success.js %}{% endcapture %}{% capture JS-articles %}{% include JS-articles.js %}{% endcapture %}{% capture JS-timeAgo %}{% include JS-timeAgo.js %}{% endcapture %}{% capture JS-timeAgo-updated %}{% include JS-timeAgo-updated.js %}{% endcapture %}{% capture JS-timeAgo-date %}{% include JS-timeAgo-date.js %}{% endcapture %}{% capture JS-hours %}{% include JS-hours.js %}{% endcapture %}{% capture JS-hash %}{% include JS-hash.js %}{% endcapture %}{% capture JS-hash-go %}{% include JS-hash-go.js %}{% endcapture %}{% capture JS-copyright %}{% include JS-copyright.js %}{% endcapture %}{% capture tab %}	{% endcapture %}
-<script>{{ JS-menu | strip_newlines | remove: tab }}{% if page.url == "/success/" %}{{ JS-success | strip_newlines | remove: tab }}{% endif %}{% if page.url == "/articles/" %}{{ JS-articles | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" %}{{ JS-timeAgo | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" and page.updated %}{{ JS-timeAgo-updated | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" and page.date %}{{ JS-timeAgo-date | strip_newlines | remove: tab }}{% endif %}{% if page.url == "/contact/" %}{{ JS-hours | strip_newlines | remove: tab }}{% endif %}{% if page.JS-hash %}{{ JS-hash | strip_newlines | remove: tab }}{% endif %}{% if page.JS-hash-go %}{{ JS-hash-go | strip_newlines | remove: tab }}{% endif %}{{ JS-copyright | strip_newlines | remove: tab }}</script>	
+<script>{{ JS-menu | strip_newlines | remove: tab }}{% if page.url == "/success/" %}{{ JS-success | strip_newlines | remove: tab }}{% endif %}{% if page.url == "/articles/" %}{{ JS-articles | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" %}{{ JS-timeAgo | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" and page.updated %}{{ JS-timeAgo-updated | strip_newlines | remove: tab }}{% endif %}{% if page.layout == "post" and page.date %}{{ JS-timeAgo-date | strip_newlines | remove: tab }}{% endif %}{% if page.url == "/contact/" %}{{ JS-hours | strip_newlines | remove: tab }}{% endif %}{% if page.JS-hash %}{{ JS-hash | strip_newlines | remove: tab }}{% endif %}{% if page.JS-hash-go %}{{ JS-hash-go | strip_newlines | remove: tab }}{% endif %}{{ JS-copyright | strip_newlines | remove: tab }}</script>{% if page.toast %}
+<div id="toast" aria-live="polite">{{page.toast}}</div>{% endif %}
 </body>
 </html>
