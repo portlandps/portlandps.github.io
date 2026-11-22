@@ -27,10 +27,10 @@
 "naics":"{{site.data.x.schema_naics}}",
 "medicalSpecialty":"https://schema.org/{{site.data.x.schema_medicalSpecialty}}",
 "telephone":"{{site.data.x.tel}}",
-"email":"mailto:{{site.data.x.email|downcase}}",
+"email":"{{site.data.x.email|downcase}}",
 "contactPoint":[
 	{"@type":"ContactPoint","telephone":"{{site.data.x.tel}}","contactType":"Phone with Voicemail"},
-	{"@type":"ContactPoint","email":"mailto:{{site.data.x.email|downcase}}"}],
+	{"@type":"ContactPoint","email":"{{site.data.x.email|downcase}}"}],
 "address":{"@type":"PostalAddress",
     "streetAddress":"{{site.data.x.address|replace:' ',' '}}",
     "addressLocality":"{{site.data.x.city}}",

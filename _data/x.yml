@@ -21,19 +21,19 @@ email: "info@PortlandPS.com"
 # {{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'}}
 # {{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'|replace:'info','privacy'}}
 name: "C. David Maxey, M.A."
-# mailto:{{site.data.x.name|remove:','|uri_escape}}%20%3C{{site.data.x.email}}%3E
+# mailto:{{site.data.x.name|remove:','|uri_escape}}%20%3C{{site.data.x.email}}%3E is not valid
 profilephoto: "CDavidMaxey.jpg"
 abouturl: "/about-C-David-Maxey/"
 schema_sameAs_individual:
   - "https://www.linkedin.com/in/cdavidmaxey/"
 company: "Portland Psychological Services"
 company_alternate:
-taxid: "825046774"
+taxid:
 npi: "1306234489"
 duns: "110912514"
 schema_BreadcrumbList_Home: "Home"
 # {{site.data.x.company}}
-# mailto:{{site.data.x.company|uri_escape}}%20%3C{{site.data.x.email}}%3E
+# mailto:{{site.data.x.company|uri_escape}}%20%3C{{site.data.x.email}}%3E is not valid
 company_short: "PortlandPS"
 # {{site.data.x.company_short}}
 tel: "+1-503-928-4182"
