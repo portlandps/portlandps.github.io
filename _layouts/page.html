@@ -38,7 +38,7 @@ main a{color:#008000;{%comment%}<--Fallback{%endcomment%}color:light-dark(#00800
 a:hover,a:focus-visible{color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
 #bar>.menu a:hover,footer>.footer a:hover{color:inherit}{%comment%}
 /* Universal CSS */ {%endcomment%}
-html{overscroll-behavior:none;-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;scroll-padding-top:{% if page.url == "/articles/" %}calc(5.75rem + 1rem + env(safe-area-inset-top,0)){% else %}calc(5.75rem + 1rem + env(safe-area-inset-top,0)){% endif %}}
+html{overscroll-behavior:none;-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;scroll-padding-top:{% if page.url == "/articles/" %}calc(5.75rem + 1rem + env(safe-area-inset-top,0px)){% else %}calc(5.75rem + 1rem + env(safe-area-inset-top,0px)){% endif %}}
 html,body{margin:0}
 .responsive{width:100%;height:auto}
 button{cursor:pointer;background:inherit;color:inherit;border:inherit}
@@ -52,17 +52,17 @@ a[href^="tel:"] span:first-child::after {content:")"}
 a[href^="tel:"] span:last-child::after  {content:"‑"}
 span.slash{margin:0 .15em}{%comment%}
 /* main padding */ {%endcomment%}
-main{position:relative;z-index:9;margin:-2.625rem 0;padding:2.625rem max(1rem,env(safe-area-inset-right,0)) 2.625rem max(1rem,env(safe-area-inset-left,0))}
+main{position:relative;z-index:9;margin:-2.625rem 0;padding:2.625rem max(1rem,env(safe-area-inset-right,0px)) 2.625rem max(1rem,env(safe-area-inset-left,0px))}
 main>div{margin:2.5rem auto 0;text-align:justify;line-height:1.25;container:clickable-main/inline-size;}{%comment%}
 @media(min-width:35rem){main>div{text-align:justify}}{%endcomment%}
 main>div>:last-child{margin-bottom:3rem}{% if page.header %}
-header{position:sticky;z-index:-1;top:0;top:env(safe-area-inset-top,0);background:#090b2a;{%comment%}<--Fallback{%endcomment%}background:light-dark(#090b2a,#090b2a);line-height:0}
+header{position:sticky;z-index:-1;top:0;top:env(safe-area-inset-top,0px);background:#090b2a;{%comment%}<--Fallback{%endcomment%}background:light-dark(#090b2a,#090b2a);line-height:0}
 header>div{margin:0 auto;max-width:122.8125rem;}
 header>div>*{display:block;margin:0 auto;max-width:calc({% if page.layout == 'post' %}(100vh - 3.125rem){% else %}(100vh - 3.125rem){% endif %} * {{page.header_w[0]}} / {{page.header_h[0]}});}{% endif %}{%comment%}
 /* #bar */ {%endcomment%}
-#bar{position:sticky;z-index:10;top:0;top:env(safe-area-inset-top,0)}{%comment%}
+#bar{position:sticky;z-index:10;top:0;top:env(safe-area-inset-top,0px)}{%comment%}
 /* #bar>.menu */ {%endcomment%}
-#bar>.menu{background:#1a237e;color:#fff;{%comment%}<--Fallback{%endcomment%}color:light-dark(#fff,#e0e0e0);padding:0 env(safe-area-inset-right,0) 0 env(safe-area-inset-left,0);}
+#bar>.menu{background:#1a237e;color:#fff;{%comment%}<--Fallback{%endcomment%}color:light-dark(#fff,#e0e0e0);padding:0 env(safe-area-inset-right,0px) 0 env(safe-area-inset-left,0px);}
 #bar>.menu>div{display:flex;max-width:75rem;margin:0 auto;flex-wrap:wrap;container:clickable-bar/inline-size;}
 #bar>.menu>div>*{text-decoration:none;line-height:0}{%comment%}
 /* #bar>.menu - :hover */ {%endcomment%}
@@ -110,7 +110,7 @@ footer>.cta a{border-radius:.9375rem .9375rem 0 0}
 [class^="inverted-radius-"]{width:1rem;height:auto;fill:#1a237e}{%comment%}
 /* footer>.footer */ {%endcomment%}
 footer{position:relative;z-index:9}
-footer>.footer{font-size:.84375rem;background:#1a237e;color:#fff;{%comment%}<--Fallback{%endcomment%}color:light-dark(#fff,#e0e0e0);padding:0 max(1rem,env(safe-area-inset-right,0)) env(safe-area-inset-bottom,0) max(1rem,env(safe-area-inset-left,0));}
+footer>.footer{font-size:.84375rem;background:#1a237e;color:#fff;{%comment%}<--Fallback{%endcomment%}color:light-dark(#fff,#e0e0e0);padding:0 max(1rem,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(1rem,env(safe-area-inset-left,0px));}
 footer>.footer>div{container:clickable-footer/inline-size;}
 footer>.footer>div>div{line-height:2.185185185}
 footer>.footer>div>div:first-child{font-size:1.25rem;line-height:1.15;padding:1.5rem 0 1rem}
