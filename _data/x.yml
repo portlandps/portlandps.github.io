@@ -127,7 +127,7 @@ schema_Services_saved:
     description: "Organizational Skills Training is a behavioral intervention strongly supported by research to strengthen organization, time management, and planning (OTMP) skills for children with ADHD to reduce their need for repeated reminders and improve their overall functioning in daily life."
 schema_currenciesAccepted:
   - "USD"
-schema_acceptedPaymentMethod:
+schema_paymentAccepted:
   - "Visa"
   - "MasterCard"
   - "American Express"
@@ -185,7 +185,7 @@ schema_person_alternateName: "Charles David Maxey"
 schema_hasCredential_name: "Licensed Independent Psychologist Associate"
 schema_hasCredential_category: "License"
 schema_hasCredential_recognizedBy: "Oregon Board of Psychology"
-schema_disambiguatingDescription: "C. David Maxey’s full name is Charles David Maxey, and he goes by David. Maxey is sometimes misspelled Maxcy, Maxi, Maxcey, Macksey, Maxe, or Maxie."
+schema_disambiguatingDescription: "C. David Maxey’s full name is Charles David Maxey, and he goes by David."
 schema_ONetCenter_year: "2019"
 schema_ONetCenter_code: "19-3033.00"
 schema_ONetCenter_name: "Clinical Psychologists"

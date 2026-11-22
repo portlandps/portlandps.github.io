@@ -1,2 +1,1 @@
-const d=new Date().getDay();
-document.querySelectorAll(`.WD${d}`).forEach(e=>e.classList.add("today"));
+document.querySelectorAll(`.WD${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(new Intl.DateTimeFormat("en-US",{timeZone:"America/Los_Angeles",weekday:"short"}).format())}`).forEach(e=>e.classList.add("today"));

@@ -46,8 +46,7 @@
         "addressLocality":"{{site.data.x.city}}",
         "addressRegion":"{{site.data.x.state|upcase|truncate:2,""}}",
         "postalCode":"{{site.data.x.zip}}",
-        "addressCountry":"{{site.data.x.country}}"}},
-    {"@type":"VirtualLocation","name":"Zoom Call"}],
+        "addressCountry":"{{site.data.x.country}}"}}],
 "availableService":{% if site.data.x.schema_Services.size > 1 %}[{% endif %}{% for service in site.data.x.schema_Services %}{
 	"@type":"{{service.type}}",
 	"name":"{{service.name}}",{% if service.alternateName %}
@@ -60,7 +59,7 @@
 "founder":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
 "employee":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
 "currenciesAccepted":{% if site.data.x.schema_currenciesAccepted.size > 1 %}["{{site.data.x.schema_currenciesAccepted|join:','}}"]{% else %}"{{site.data.x.schema_currenciesAccepted}}"{% endif %},
-"acceptedPaymentMethod":{% if site.data.x.schema_acceptedPaymentMethod.size > 1 %}["{{site.data.x.schema_acceptedPaymentMethod|join:'","'}}"]{% else %}"{{site.data.x.schema_acceptedPaymentMethod}}"{% endif %},
+"paymentAccepted":{% if site.data.x.schema_paymentAccepted.size > 1 %}["{{site.data.x.schema_paymentAccepted|join:'","'}}"]{% else %}"{{site.data.x.schema_paymentAccepted}}"{% endif %},
 "openingHoursSpecification":{% if site.data.x.schema_OpeningHoursSpecification.size > 1 %}[{%endif%}{% for opening in site.data.x.schema_OpeningHoursSpecification %}{"@type": "OpeningHoursSpecification","dayOfWeek":{% if opening.days.size > 1 %}[{%endif%}{% for days in opening.days %}"https://schema.org/{{days}}"{% unless forloop.last %},{% endunless %}{% endfor %}{% if opening.days.size > 1 %}]{%endif%},"opens":"{{opening.opens}}","closes":"{{opening.closes}}","name":"{{opening.type}}"}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_OpeningHoursSpecification.size >1 %}]{%endif%}
 }</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person","url":"{{site.url}}{{site.data.x.abouturl}}",
