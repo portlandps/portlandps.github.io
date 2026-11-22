@@ -96,13 +96,6 @@ schema_Services:
     cpt:
     relevantSpecialty: "Psychiatric"
     description: "Cognitive Behavioral Therapy for Insomnia (CBT-I) is a behavioral treatment (without medications) strongly supported by research to help children experiencing persistent difficulties at bedtime or with falling or staying asleep."
-  - type: "PsychologicalTreatment"
-    name: "Organizational Skills Training"
-    alternateName: "Therapy"
-    url:
-    cpt:
-    relevantSpecialty: "Psychiatric"
-    description: "Organizational Skills Training is a behavioral intervention strongly supported by research to strengthen organization, time management, and planning (OTMP) skills for children with ADHD to reduce their need for repeated reminders and improve their overall functioning in daily life."
   - type: "DiagnosticProcedure"
     name: "Diagnostic Assessment"
     alternateName: "Diagnostic Evaluation"
@@ -124,6 +117,14 @@ schema_Services:
     cpt:
     relevantSpecialty: "Psychiatric"
     description: "If the initial diagnostic assessment for Attention-Deficit/Hyperactivity Disorder (ADHD) reveals a complex presentation (e.g., other conditions might better account for the symptoms), psychological evaluation and ADHD testing is needed to provide diagnostic clarity and treatment recommendations."	
+schema_Services_saved:
+  - type: "PsychologicalTreatment"
+    name: "Organizational Skills Training"
+    alternateName: "Therapy"
+    url:
+    cpt:
+    relevantSpecialty: "Psychiatric"
+    description: "Organizational Skills Training is a behavioral intervention strongly supported by research to strengthen organization, time management, and planning (OTMP) skills for children with ADHD to reduce their need for repeated reminders and improve their overall functioning in daily life."
 schema_currenciesAccepted:
   - "USD"
 schema_acceptedPaymentMethod:
