@@ -126,10 +126,11 @@ header_alt: "Office of C. David Maxey, M.A."
 og: true
 schema: "schema.json"
 css: |-
-  @container clickable-main (width >= 46rem){
-    #overlay{position:absolute;top:-15rem;padding:1rem;left:50%;transform:translateX(-50%);white-space:nowrap;background-color:rgb(26,35,126,.8);border-radius:.375rem;color:#fff}
-    #overlay>:first-child{margin-top:0}
-    #overlay>:last-child{margin-bottom:0}}
+  @media(height>=24rem){
+    @container clickable-main(width>=46rem){
+      #overlay{position:absolute;bottom:100%;padding:1rem;left:50%;transform:translate(-50%,-8rem);white-space:nowrap;background-color:rgb(26,35,126,.8);border-radius:.375rem;color:#fff}
+      #overlay>:first-child{margin-top:0}
+      #overlay>:last-child{margin-bottom:0}}}
   h1{font-size:2.5rem;font-weight:normal;line-height:1.15;margin:0 auto 3rem}
   h1+.subtitle{font-size:1.125rem;margin:-2rem auto 3rem;line-height:1.2}
   @container clickable-main (width >= 28.6875rem){
