@@ -22,7 +22,7 @@ header_h: [136,272,408,544,816,1088,1632]
 header_alt: "student taller than classmates"
 schema: "schema.json"
 tags:
-- Special Education & 504
+- Special Education &amp; 504
 - Grade Placement
 css: |-
   h2{margin:1.5em 0 .5em;font-size:1.5rem;font-weight:500;text-align:center;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
