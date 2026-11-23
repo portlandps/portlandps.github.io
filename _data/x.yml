@@ -39,6 +39,7 @@ company_short: "PortlandPS"
 tel: "+1-503-928-4182"
 # tel:{{site.data.x.tel}}
 # {{site.data.x.tel|replace_first:'-','<span>'|replace_first:'-','</span><span>'|replace:'-','</span>'}}
+# {{site.data.x.tel|replace_first:'-',' ('|replace_first:'-',') '}}
 address: "6950 SW Hampton St Suite 207"
 # {{site.data.x.address}}
 # {{site.data.x.address|replace:'Suite','Ste'}}

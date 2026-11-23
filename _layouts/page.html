@@ -238,7 +238,7 @@ aside img{display:block;box-sizing: border-box}
     </div>{% endunless %}
     <nav class="footer center" aria-label="Footer"><div>
         <div class="FacultyGlyphic">Portland Psychological&nbsp;Services</div>
-        <div class="phone-email"><a href="tel:{{site.data.x.tel}}" aria-label="{{site.data.x.tel|replace_first:"-"," ("|replace_first:"-",") "}}">{{site.data.x.tel|replace_first:"-","<span>"|replace_first:"-","</span><span>"|replace:"-","</span>"}}</a><br><span class="bullet">&bull;</span><a href="mailto:{{site.data.x.email}}">{{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'}}</a></div>
+        <div class="phone-email"><a href="tel:{{site.data.x.tel}}" aria-label="{{site.data.x.tel|replace_first:'-',' ('|replace_first:'-',') '}}">{{site.data.x.tel|replace_first:"-","<span>"|replace_first:"-","</span><span>"|replace:"-","</span>"}}</a><br><span class="bullet">&bull;</span><a href="mailto:{{site.data.x.email}}">{{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'}}</a></div>
         <div class="notices-links"><a href="{{site.url}}/privacy/">Privacy&nbsp;Practices&nbsp;Notice</a><br><span class="bullet">&bull;</span><a href="{{site.url}}/good-faith-estimate-notice/">Good&nbsp;Faith&nbsp;Estimate&nbsp;Notice</a></div>
 		<div id="copyright-notice">&copy;&nbsp;<span id="y">{{ "now" | date: "%Y" }}</span> <span class="FacultyGlyphic">Portland&nbsp;Psychological&nbsp;Services</span></div>
     </div></nav>
