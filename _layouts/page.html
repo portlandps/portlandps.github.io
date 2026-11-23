@@ -88,7 +88,7 @@ header>div>*{display:block;margin:0 auto;max-width:calc({% if page.layout == 'po
 #bar>.menu>div>a.wrapped{line-height:1.125;padding:.4375rem 1rem}{%comment%}
 /* #bar>.menu>div>button */ {%endcomment%}
 #bar>.menu>div>button{order:2;padding:.34375rem .625rem;line-height:0;display:none}
-#bar>.menu>div>button>*{width:1.875rem;height:.3125rem;background-color:#fff;background-color:light-dark(#fff,#e0e0e0);border-radius:.125rem;margin:.375rem 0;transition:.5s}
+#bar>.menu>div>button>*{display:block;width:1.875rem;height:.3125rem;background-color:#fff;background-color:light-dark(#fff,#e0e0e0);border-radius:.125rem;margin:.375rem 0;transition:.5s}
 #bar .open button>:nth-child(1){transform:translate(0,.6875rem) rotate(-45deg)}
 #bar .open button>:nth-child(2){opacity:0}
 #bar .open button>:nth-child(3){transform:translate(0,-.6875rem) rotate(45deg)}
@@ -221,7 +221,7 @@ aside img{display:block;box-sizing: border-box}
         <a{% if page.url == '/fees/' %} class="active wrapped" aria-current="page" onclick="m(false)"{% else %} class="wrapped"{% endif %} href="{{site.url}}/fees/{% if page.url == '/fees/' %}#{% endif %}">Fees &amp; <br>Insurance</a>
         <a{% if page.url == '/contact/' %} class="active" aria-current="page" onclick="m(false)"{% endif %} href="{{site.url}}/contact/{% if page.url == '/contact/' %}#{% endif %}">Contact</a>
         <a{% if page.url == '/articles/' %} class="active" aria-current="page" onclick="m(false)"{% endif %} href="{{site.url}}/articles/{% if page.url == '/articles/' %}#{% endif %}">Articles</a>
-        <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" id="menubutton" onclick="m()"><div></div><div></div><div></div></button>
+        <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" id="menubutton" onclick="m()"><span></span><span></span><span></span></button>
     </div></div>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' or page.url == '/ca/' or page.url == '/ya/' or page.url == '/aa/' %}
     <div class="cta">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16" class="inverted-radius-top-left"><path d="M16,16 L16,0 L0,0 A16,16 0 0,1 16,16 Z"/></svg>
