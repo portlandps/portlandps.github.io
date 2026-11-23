@@ -29,7 +29,7 @@ header_h: [143,286,429,572,858,1144,1716]
 header_alt: "students learning in a small group at school"
 schema: "schema.json"
 tags:
-- Special Education &amp; 504
+- Special Education & 504
 paper: true
 css: |-
   table{border-collapse:collapse}
