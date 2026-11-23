@@ -153,10 +153,10 @@ document.getElementById("form").addEventListener("submit",function(event){
 		document.getElementById("date").value=`${bVM}-${bVD}-${bVY}`;
 	}
 	const emails=[document.getElementById("e"),document.getElementById("pe"),document.getElementById("oe")];
-	const values=emails.map(email=>email ? email.value.trim().toLowerCase() : "");
+	const values=emails.map(email=>(email&&!email.matches(":disabled")) ? email.value.trim().toLowerCase() : "");
 	let hasDup=false;
 	emails.forEach((email,index)=>{
-		if(!email)return;
+		if(!email||email.matches(":disabled")){if(email)email.setCustomValidity("");return;}
 		const val=values[index];
 		const isDup=val&&values.some((otherV,otherI)=>index!==otherI&&val===otherV);
 		if(isDup){
