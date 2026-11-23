@@ -37,7 +37,7 @@ css: |-
   fieldset.names label,#inputotherlabel{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .radiogrid{display:grid;grid-template-columns:auto 1fr;gap:.75rem .3125rem;align-items:start;text-align:left;margin:0 0 1.5rem}
   .radiogrid label{margin:0 0 .1875rem;}
-  .ageequal{display:none}
+  #ageequal{display:none}
   #success{display:none}
   #success>div{text-align:center;line-height:1;font-size:3rem;margin:0 0 2rem;font-weight:500}
   #success>:last-child{margin-bottom:4rem}
@@ -53,7 +53,7 @@ css: |-
   textarea{height:auto;resize:vertical;field-sizing:content;min-height:8.25rem;font-family:inherit;font-size:inherit;}
 ---
 <div id="success">
-	<svg class="check" viewBox="0 0 214 214" id="check" aria-label="Checkmark Icon"><g fill="none" stroke="currentColor" stroke-width="2"><circle class="semi-transparent" fill="currentColor" opacity="0.15" cx="107" cy="107" r="72"></circle><circle class="colored" fill="currentColor" cx="107" cy="107" r="72" opacity="1"></circle><polyline stroke="#fff" stroke-width="10" points="73.5,112.8 93.7,132.9 142.2,84.4" stroke-dasharray="50%,50%" stroke-dashoffset="100%" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+	<svg class="check" viewBox="0 0 214 214" id="check" role="img" aria-label="Checkmark Icon"><g fill="none" stroke="currentColor" stroke-width="2"><circle class="semi-transparent" fill="currentColor" opacity="0.15" cx="107" cy="107" r="72"></circle><circle class="colored" fill="currentColor" cx="107" cy="107" r="72" opacity="1"></circle><polyline stroke="#fff" stroke-width="10" points="73.5,112.8 93.7,132.9 142.2,84.4" stroke-dasharray="50%,50%" stroke-dashoffset="100%" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
 	<div>Scheduled <span>New Client Inquiry <br><span>(Phone Call | 10 minutes | Free)</span></span></div>
 	<p class="center">You will receive a calendar&nbsp;invite and an email with the phone&nbsp;call&nbsp;details.</p>
 	<p><strong>Please complete the Quick Form below.</strong> You can wait until we talk to complete it, if you prefer and you’re not in a hurry to start services.</p>
@@ -115,11 +115,11 @@ css: |-
 	<fieldset>
 		<legend><h2>Insurance Company or&nbsp;Network</h2></legend>
 		<div class="radiogrid">
-			<input type="radio" id="United" name="Radio" value="United Health / Optum" required onclick="showother(false)"/>
+			<input type="radio" id="United" name="Radio" value="United Health / Optum" required/>
 			<label for="United" >United&nbsp;Health / Optum</label>
-			<input type="radio" id="no" name="Radio" value="Not Using Insurance" required onclick="showother(false)"/>
+			<input type="radio" id="no" name="Radio" value="Not Using Insurance" required/>
 			<label for="no" >Not Using Insurance</label>
-			<input type="radio" id="other" name="Radio" value="zfs-others-zfs" required onclick="showother(true)"/>
+			<input type="radio" id="other" name="Radio" value="zfs-others-zfs" required/>
 			<label for="other">Other Insurance<span> (Out‑of‑Network)</span></label>
 			<label id="inputotherlabel" for="o">Other Insurance</label>
 			<input type="text" id="o" name="Radio_allow_others_text" placeholder="Other Insurance" required autocomplete="off" maxlength="150" list="insurance" disabled/>
