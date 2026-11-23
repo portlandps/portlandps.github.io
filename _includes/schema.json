@@ -59,7 +59,7 @@
 "founder":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
 "employee":{"@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person"},
 "currenciesAccepted":{% if site.data.x.schema_currenciesAccepted.size > 1 %}["{{site.data.x.schema_currenciesAccepted|join:','}}"]{% else %}"{{site.data.x.schema_currenciesAccepted}}"{% endif %},
-"paymentAccepted":{% if site.data.x.schema_paymentAccepted.size > 1 %}["{{site.data.x.schema_paymentAccepted|join:'","'}}"]{% else %}"{{site.data.x.schema_paymentAccepted}}"{% endif %},
+"paymentAccepted":{% if site.data.x.schema_paymentAccepted.size > 1 %}"{{site.data.x.schema_paymentAccepted|join:','}}"{% else %}"{{site.data.x.schema_paymentAccepted}}"{% endif %},
 "openingHoursSpecification":{% if site.data.x.schema_OpeningHoursSpecification.size > 1 %}[{%endif%}{% for opening in site.data.x.schema_OpeningHoursSpecification %}{"@type": "OpeningHoursSpecification","dayOfWeek":{% if opening.days.size > 1 %}[{%endif%}{% for days in opening.days %}"https://schema.org/{{days}}"{% unless forloop.last %},{% endunless %}{% endfor %}{% if opening.days.size > 1 %}]{%endif%},"opens":"{{opening.opens}}","closes":"{{opening.closes}}","name":"{{opening.type}}"}{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.data.x.schema_OpeningHoursSpecification.size >1 %}]{%endif%}
 }</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"{{site.url}}{{site.data.x.abouturl}}#Person","url":"{{site.url}}{{site.data.x.abouturl}}",
