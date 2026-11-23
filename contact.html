@@ -102,10 +102,8 @@ css: |-
 		<tr class="WD0"><th scope="row">Sun</th><td>No Scheduled Calls</td></tr>
 	</table>
 </div>
-<div id="address"></div>
-<div id="map"></div>
 <div class="address center">
-	<div>
+	<div><span id="address"></span><span id="map"></span>
 		<div>{{site.data.x.address}}</div>
 	</div>
 	<div>
@@ -117,16 +115,13 @@ css: |-
 <div class="map">
 	<a rel="nofollow noreferrer" target="_blank" href="{{site.data.x.googlemaps.url}}"><img src="{{site.data.x.googlemaps.api}}?center={{site.data.x.googlemaps.center|url_encode}}&zoom={{site.data.x.googlemaps.zoom}}&size={{site.data.x.googlemaps.size}}&scale={{site.data.x.googlemaps.scale}}&format={{site.data.x.googlemaps.format}}&maptype={{site.data.x.googlemaps.maptype}}&markers={{site.data.x.googlemaps.markers|prepend:site.url|prepend:'scale:2|icon:'|append:'|'|append:site.data.x.googlemaps.markers_address|url_encode}}&key={{site.data.x.googlemaps.key}}&signature={{site.data.x.googlemaps.signature}}" crossorigin="anonymous" fetchpriority="high" loading="eager" height="1280" width="1280" alt="Google Maps of {{site.data.x.address|replace:'Suite','Ste'}}, {{site.data.x.city}}, {{site.data.x.state|upcase|truncate:2,''}} {{site.data.x.zip}}"></a>
 </div>
-<div id="streetview"></div>
-<div id="street"></div>
-<div class="streetview-label center">
+<div class="streetview-label center"><span id="streetview"></span><span id="street"></span>
 	<div>Street View</div>
 </div>
 <div class="streetview">
 	<a rel="nofollow noreferrer" target="_blank" href="{{site.data.x.googlestreetview.url}}&viewpoint={{site.data.x.googlestreetview.v_viewpoint|url_encode}}&heading={{site.data.x.googlestreetview.h_heading}}&fov={{site.data.x.googlestreetview.y_fov}}&pitch={{site.data.x.googlestreetview.pitch}}"><picture><source srcset="{% for w in site.data.x.streetview_w %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{w}}/{{site.data.x.streetview}}.avif {{w}}w{% endfor %}" type="image/avif"><img alt="Street View of {{site.data.x.address|replace:'Suite','Ste'}}, {{site.data.x.city}}, {{site.data.x.state|upcase|truncate:2,''}} {{site.data.x.zip}}" src="{{site.data.x.cache}}/{{site.data.x.streetview_w[0]}}/{{site.data.x.streetview}}.jpg" fetchpriority="low" loading="lazy" srcset="{% for w in site.data.x.streetview_w %}{% unless forloop.first %},{% endunless %}{{site.data.x.cache}}/{{w}}/{{site.data.x.streetview}}.jpg {{w}}w{% endfor %}" class="responsive" width="{{site.data.x.streetview_w[0]}}" height="{{site.data.x.streetview_h[0]}}" sizes="(width < 40rem) 100vw,40rem"></picture></a>
 </div>
-<div id="crisis"></div>
-<h2 class="crisis center">Crisis Care <span>available all day and night</span></h2>
+<h2 id="crisis" class="crisis center">Crisis Care <span>available all day and night</span></h2>
 <div class="center">Call or text 988 nationwide. <br>In an emergency, call 911.</div>
 <h3 class="crisis-local center">Portland-Area Crisis&nbsp;Services</h3>
 <div class="crisis-local left">
@@ -143,8 +138,7 @@ css: |-
 		<a rel="nofollow noreferrer" href="https://www.clackamas.us/behavioralhealth/urgentmentalhealth">Clackamas County</a>
 	</div>
 </div>
-<div id="social"></div>
-<h2 class="social center">Policy on Social&nbsp;Settings</h2>
+<h2 id="social" class="social center">Policy on Social&nbsp;Settings</h2>
 <p class="subtitle center">If You See Me Online or&nbsp;Around&nbsp;Town</p>
 <h3 class="social left">Online Social Networks</h3>
 <p><span class="italic">Online social networks (like Facebook and Twitter) are neither professional contexts nor private ways to communicate. Therefore, I do not use them to interact with people I serve professionally.</span> If you happen to see me online, please do not contact, friend, or follow me in any way. If I am contacted, I will ignore, block, or not reply to that contact. If I discover that I have accidentally connected with you, I will cancel or block that connection. Please understand that <strong>I do not interact with you online to protect your child’s and family’s privacy</strong> and to maintain our professional relationship.</p>
