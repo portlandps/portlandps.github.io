@@ -116,7 +116,7 @@ schema_Services:
     url:
     cpt:
     relevantSpecialty: "Psychiatric"
-    description: "If the initial diagnostic assessment for Attention-Deficit/Hyperactivity Disorder (ADHD) reveals a complex presentation (e.g., other conditions might better account for the symptoms), psychological evaluation and ADHD testing is needed to provide diagnostic clarity and treatment recommendations."	
+    description: "If the initial diagnostic assessment for Attention-Deficit/Hyperactivity Disorder (ADHD) reveals a complex presentation (e.g., other conditions might better account for the symptoms), psychological evaluation and ADHD testing are needed to provide diagnostic clarity and treatment recommendations."	
 schema_Services_saved:
   - type: "PsychologicalTreatment"
     name: "Organizational Skills Training"
