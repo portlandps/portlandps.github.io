@@ -10,13 +10,8 @@ header:
 og: false
 schema:
 css: |-
-  .target,
-  #office,
-  main>div>div>div:target~#oops
-  	{display:none}
-  .target:target,
-  .target[id$="-office"]:target~#office
-  	{display:block}
+  .target,#office,.target:target~#oops{display:none}
+  .target:target,.target[id$="-office"]:target~#office{display:block}
   h1{text-align:center;line-height:1;font-size:3rem;margin:0 0 2rem;font-weight:500}
   h1+p{margin-bottom:4rem}
   .target h1>span{display:block;line-height:1.35;margin-top:.35em;font-size:.5em;font-weight:normal}
