@@ -84,7 +84,8 @@ today.setHours(0,0,0,0);
 const month=today.getMonth()+1;
 const year=today.getFullYear();
 const b=document.getElementById("b");
-b.max=today.toLocaleDateString("en-CA");
+b.min=(year-50)+"-01-01";
+b.max=(year-2)+"-12-31";
 const gy=document.getElementById("gy");
 if(month<=6){gy.value=year;
 	if(month===5||month===6){
@@ -111,7 +112,7 @@ const ageEqual=document.getElementById("ageequal");
 function age(){
 	let isAdult=false;
 	let isChild=false;
-	if(b.value&&+b.value.slice(0,4)>=1900){
+	if(b.value&&b.validity.valid){
 		const [y,m,d]=b.value.split("-");
 		const bDate=new Date(+y,+m-1,+d);
 		let ageInYears=today.getFullYear()-bDate.getFullYear();
