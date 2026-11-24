@@ -54,7 +54,7 @@ css: |-
   table th{padding-left:.3125rem;font-weight:600;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
   table tr{border-width:.03125rem 0;border-color:#1a237e;border-color:light-dark(#1a237e,#e0e0e0);border-style:solid}
   table span{font-size:.75em}
-  .today{border-left:.25rem solid #1a237e;border-left:.25rem solid light-dark(#1a237e,#e0e0e0);background-color:rgb(26,35,126,.1);background-color:light-dark(rgb(26,35,126,.1),#e0e0e0);color:#000}
+  .today{border-left:.25rem solid #1a237e;border-left:.25rem solid light-dark(#1a237e,#e0e0e0);background-color:rgba(26,35,126,.1);background-color:light-dark(rgba(26,35,126,.1),#e0e0e0);color:#000}
   .today th{padding-left:.1875rem;color:#1a237e;color:light-dark(#1a237e,#000)}
   h2.crisis span{display:block;font-size:.875rem;font-weight:normal;margin-top:.15rem}
   h2.crisis+div{font-size:1.125rem;line-height:2rem;margin:-1.25rem 0 2rem}
@@ -69,7 +69,7 @@ css: |-
 <h1 class="center">Contact Information</h1>
 <div id="basics">
 	<div class="phone-email">
-		<div class="center"><a href="tel:{{site.data.x.tel}}">{{site.data.x.tel|replace_first:'-','<span>'|replace_first:'-','</span><span>'|replace:'-','</span>'}}</a><div class="phone-with-voicemail">Phone with Voicemail</div></div>
+		<div class="center"><a href="tel:{{site.data.x.tel}}" aria-label="{{site.data.x.tel|replace_first:'-',' ('|replace_first:'-',') '}}">{{site.data.x.tel|replace_first:'-','<span>'|replace_first:'-','</span><span>'|replace:'-','</span>'}}</a><div class="phone-with-voicemail">Phone with Voicemail</div></div>
 		<div class="bullet"><span>&bull;</span></div>
 		<div><a href="mailto:{{site.data.x.email}}">{{site.data.x.email|replace:'@','@<span class="FacultyGlyphic">'|replace:'.','</span>.'}}</a></div>
 	</div>{% comment %}
@@ -77,10 +77,10 @@ css: |-
 </div>
 <h2 class="center">Hours</h2>{%comment%}medium.com/yext-design/the-anatomy-of-well-designed-business-hours-6d9e2bf54ad0{%endcomment%}
 <div class="hours">
-	<h3>In&#8209;Person&nbsp;&&nbsp;Virtual Appointments</h3>
+	<h3>In&#8209;Person&nbsp;&amp;&nbsp;Virtual Appointments</h3>
 	<p>I offer after-school appointments at my office or on <svg class="zoom" viewBox="0 0 83.729943 19.03792" id="zoom" role="img" aria-label="Zoom"><g><path stroke-width="0" d="M17.55926,18.76068H2.58896c-1.05034,0-1.98877-.62706-2.39071-1.59744s-.18172-2.0774.561-2.81999L11.1286,3.97394H3.69668C1.65505,3.97394,0,2.31888,0,.27726h13.8059c1.05025,0,1.98864.62688,2.39062,1.59726.40202.97038.18195,2.07722-.56068,2.82017L5.26644,15.064h8.59614c2.04163,0,3.69668,1.65506,3.69668,3.69668ZM83.72992,7.20854C83.72992,3.2337,80.49618,0,76.52138,0,74.39524,0,72.48173.9258,71.16119,2.39481c-1.32055-1.46902-3.23406-2.39481-5.36019-2.39481-3.97479,0-7.20854,3.2337-7.20854,7.20854v11.55214c2.04162,0,3.69668-1.65506,3.69668-3.69668v-7.85546c0-1.93643,1.57542-3.51185,3.51185-3.51185s3.51185,1.57542,3.51185,3.51185v7.85546c0,2.04162,1.65506,3.69668,3.69668,3.69668V7.20854c0-1.93643,1.57542-3.51185,3.51185-3.51185s3.51185,1.57542,3.51185,3.51185v7.85546c0,2.04162,1.65506,3.69668,3.69668,3.69668V7.20854h.00004ZM56.74412,9.51896c0,5.25718-4.26178,9.51896-9.51896,9.51896s-9.51896-4.26178-9.51896-9.51896S41.96799,0,47.22516,0s9.51896,4.26178,9.51896,9.51896ZM53.04743,9.51896c0-3.21556-2.60672-5.82228-5.82228-5.82228s-5.82228,2.60672-5.82228,5.82228,2.60672,5.82228,5.82228,5.82228,5.82228-2.60672,5.82228-5.82228ZM36.22752,9.51896c0,5.25718-4.26178,9.51896-9.51896,9.51896s-9.51896-4.26178-9.51896-9.51896S21.45139,0,26.70856,0s9.51896,4.26178,9.51896,9.51896ZM32.53083,9.51896c0-3.21556-2.60672-5.82228-5.82228-5.82228s-5.82228,2.60672-5.82228,5.82228,2.60672,5.82228,5.82228,5.82228,5.82228-2.60672,5.82228-5.82228Z"/></g></svg>, and during extended school breaks, I also offer midday appointments.</p>
 	<table>{%comment%} ALSO EDIT HOURS IN site.data.x.schema_OpeningHoursSpecification {%endcomment%}
-		<caption>In&#8209;Person&nbsp;&&nbsp;Virtual Appointments</caption>
+		<caption>In&#8209;Person&nbsp;&amp;&nbsp;Virtual Appointments</caption>
 		<tr class="WD1"><th scope="row">Mon</th><td>3:00<span> PM</span> &ndash; 6:00<span> PM</span></td></tr>
 		<tr class="WD2"><th scope="row">Tue</th><td>3:00<span> PM</span> &ndash; 6:00<span> PM</span></td></tr>
 		<tr class="WD3"><th scope="row">Wed</th><td>3:00<span> PM</span> &ndash; 6:00<span> PM</span></td></tr>
@@ -90,7 +90,7 @@ css: |-
 		<tr class="WD0"><th scope="row">Sun</th><td>No Appointments</td></tr>
 	</table>
 	<h3>Scheduled Phone Calls</h3>
-	<p><a href="{{site.data.x.cta}}">Schedule a free call</a> or feel free to leave a detailed voicemail for me anytime by calling <a href="tel:{{site.data.x.tel}}">{{site.data.x.tel|replace_first:'-','<span>'|replace_first:'-','</span><span>'|replace:'-','</span>'}}</a> (and then dialing 2 to go directly to voicemail).</p>
+	<p><a href="{{site.data.x.cta}}">Schedule a free call</a> or feel free to leave a detailed voicemail for me anytime by calling <a href="tel:{{site.data.x.tel}}" aria-label="{{site.data.x.tel|replace_first:'-',' ('|replace_first:'-',') '}}">{{site.data.x.tel|replace_first:'-','<span>'|replace_first:'-','</span><span>'|replace:'-','</span>'}}</a> (and then dialing 2 to go directly to voicemail).</p>
 	<table>{%comment%} ALSO EDIT HOURS IN site.data.x.schema_OpeningHoursSpecification {%endcomment%}
 		<caption>Scheduled Phone Calls</caption>
 		<tr class="WD1"><th scope="row">Mon</th><td>9:30<span> AM</span> &ndash; 2:00<span> PM</span></td></tr>
@@ -126,15 +126,15 @@ css: |-
 <h3 class="crisis-local center">Portland-Area Crisis&nbsp;Services</h3>
 <div class="crisis-local left">
 	<div>
-		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-291-9111">503&#8209;291&#8209;9111</a>
+		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-291-9111" aria-label="+1 (503) 291-9111">503&#8209;291&#8209;9111</a>
 		<a rel="nofollow noreferrer" href="https://www.washingtoncountyor.gov/behavioral-health/crisis-services">Washington County</a>
 	</div>
 	<div>
-		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-988-4888">503&#8209;988&#8209;4888</a>
+		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-988-4888" aria-label="+1 (503) 988-4888">503&#8209;988&#8209;4888</a>
 		<a rel="nofollow noreferrer" href="https://www.multco.us/behavioral-health/mental-health-crisis-intervention">Multnomah County</a>
 	</div>
 	<div>
-		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-655-8585">503&#8209;655&#8209;8585</a>
+		<a class="center" rel="nofollow noreferrer" href="tel:+1-503-655-8585" aria-label="+1 (503) 655-8585">503&#8209;655&#8209;8585</a>
 		<a rel="nofollow noreferrer" href="https://www.clackamas.us/behavioralhealth/urgentmentalhealth">Clackamas County</a>
 	</div>
 </div>

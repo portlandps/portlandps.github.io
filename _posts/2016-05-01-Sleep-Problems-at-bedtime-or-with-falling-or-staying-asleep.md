@@ -34,7 +34,7 @@ css: |-
   table{border-collapse:collapse;margin:0}
   thead{vertical-align:bottom}
   th{padding:0.1em .5em;font-weight:600}
-  tr:nth-child(even){background-color:rgb(0,0,0,.05);background-color:light-dark(rgb(0,0,0,.05),transparent)}
+  tr:nth-child(even){background-color:rgba(0,0,0,.05);background-color:light-dark(rgba(0,0,0,.05),transparent)}
   td:nth-child(2){padding-left:.5em;text-align:right}
   td:nth-child(2).center{text-align:center}
   td:nth-child(3){width:.5em;padding:0}

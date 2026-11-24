@@ -41,7 +41,7 @@ css: |-
   th,td{padding:.5em}
   th,td>div:first-child{font-weight:bold;padding-bottom:.5em}
   td>div:nth-child(2){padding-left:1.5em}
-  tr:nth-child(even){background-color:rgb(0,0,0,.05);background-color:light-dark(rgb(0,0,0,.05),transparent)}
+  tr:nth-child(even){background-color:rgba(0,0,0,.05);background-color:light-dark(rgba(0,0,0,.05),transparent)}
   table ul{list-style-type:disc}
   table ol{list-style-type:decimal}
   table ol,table ul{margin-block-start:.5em;margin-block-end:.5em;margin-inline-start:0;margin-inline-end:0;padding-inline-start:1.5em}
