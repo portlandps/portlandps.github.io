@@ -1,4 +1,4 @@
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"{{site.url}}/{{page.url}}","url":"{{site.url}}/{{page.url}}",
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"{{site.url}}{{page.url}}","url":"{{site.url}}{{page.url}}",
 "name": "Articles from Portland Psychological Services",
 "description": "Articles for parents and teachers about evidence-based practices, psychological services, and school-based supports for children and youth",
 "inLanguage": "en-US",
