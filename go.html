@@ -75,13 +75,13 @@ css: |-
 	<fieldset>
 		<legend><h2>Client</h2></legend>
 		<div class="instructions">For services that involve a child&nbsp;and&nbsp;parent, the&nbsp;child&nbsp;is&nbsp;the&nbsp;client.</div>
-		<fieldset class="names" autocapitalize="words"><legend>Client’s Legal Name</legend><label for="f">First Name</label><input type="text" id="f" name="Name_First" placeholder="First Name" required autocomplete="client given-name" inputmode="text" maxlength="255"/><label for="l">Last Name</label><input type="text" id="l" name="Name_Last" placeholder="Last Name" required autocomplete="client family-name" inputmode="text" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Client’s Legal Name</legend><label for="f">First Name</label><input type="text" id="f" name="Name_First" placeholder="First Name" required autocomplete="section-client given-name" inputmode="text" maxlength="255"/><label for="l">Last Name</label><input type="text" id="l" name="Name_Last" placeholder="Last Name" required autocomplete="section-client family-name" inputmode="text" maxlength="255"/>
 		</fieldset>
 		<label for="n">Client’s Preferred Name</label>
-		<input  type="text" id="n" name="SingleLine" placeholder="Preferred Name" autocomplete="client nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<input  type="text" id="n" name="SingleLine" placeholder="Preferred Name" autocomplete="section-client nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="b">Client’s Birthdate</label>
 		<div id="ageequal" class="float-right">Age = <span id="age"></span></div>
-		<input type="date" id="b" required autocomplete="client bday" max="2059-12-31" min="1960-01-01"/>
+		<input type="date" id="b" required autocomplete="section-client bday" max="2059-12-31" min="1960-01-01"/>
 		<input type="hidden" id="date" name="Date" maxlength="25"/>
 		<input type="hidden" id="gy" name="Number">
 		<label for="g">Client’s Current Grade in School</label>
@@ -108,7 +108,7 @@ css: |-
 		<div id="summer"></div>
 		<div id="e_">
 			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
-			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="client email" inputmode="email" maxlength="255"/>
+			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="section-client email" inputmode="email" maxlength="255"/>
 			<div>A work or school email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 		</div>
 	</fieldset>
@@ -131,12 +131,12 @@ css: |-
 	<fieldset id="parent">
 		<legend><h2>Parent<span id="parentOptional"></span></h2></legend>
 		<div class="instructions" id="pay"></div>
-		<fieldset class="names" autocapitalize="words"><legend>Parent’s Legal Name</legend><label for="pf">First Name</label><input type="text" id="pf" name="Name1_First" placeholder="First Name" required autocomplete="parent given-name" maxlength="255"/><label for="pl">Last Name</label><input type="text" id="pl" name="Name1_Last" placeholder="Last Name" required autocomplete="parent family-name" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Parent’s Legal Name</legend><label for="pf">First Name</label><input type="text" id="pf" name="Name1_First" placeholder="First Name" required autocomplete="section-parent given-name" maxlength="255"/><label for="pl">Last Name</label><input type="text" id="pl" name="Name1_Last" placeholder="Last Name" required autocomplete="section-parent family-name" maxlength="255"/>
 		</fieldset>
 		<label for="pn">Parent’s Preferred Name</label>
-		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="parent nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="section-parent nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="pe">Parent’s email</label>
-		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="parent email" inputmode="email" maxlength="255"/>
+		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="section-parent email" inputmode="email" maxlength="255"/>
 		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
 	<div id="p_">
@@ -161,12 +161,12 @@ css: |-
 	</div>{%endcomment%}
 	<fieldset id="another">
 		<legend><h2>Other Parent<span id="anotherOptional"></span></h2></legend>
-		<fieldset class="names" autocapitalize="words"><legend>Other Parent’s Legal Name</legend><label for="of">First Name</label><input type="text" id="of" name="Name2_First" placeholder="First Name" required autocomplete="other given-name" maxlength="255"/><label for="ol">Last Name</label><input type="text" id="ol" name="Name2_Last" placeholder="Last Name" required autocomplete="other family-name" maxlength="255"/>
+		<fieldset class="names" autocapitalize="words"><legend>Other Parent’s Legal Name</legend><label for="of">First Name</label><input type="text" id="of" name="Name2_First" placeholder="First Name" required autocomplete="section-other given-name" maxlength="255"/><label for="ol">Last Name</label><input type="text" id="ol" name="Name2_Last" placeholder="Last Name" required autocomplete="section-other family-name" maxlength="255"/>
 		</fieldset>
 		<label for="on">Other Parent’s Preferred Name</label>
-		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="other nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
+		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="section-other nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="oe">Other Parent’s email</label>
-		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="other email" inputmode="email" maxlength="255"/>
+		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="section-other email" inputmode="email" maxlength="255"/>
 		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
 	<label id="concernsLabel" for="concerns">Why are you looking for services? What&nbsp;are&nbsp;your&nbsp;concerns?</label>
