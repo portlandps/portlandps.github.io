@@ -36,7 +36,7 @@ css: |-
 </div></blockquote>
 <aside class="float-right">
 	<a rel="nofollow" href="{{site.url}}/NASP-Position-Statement-on-Grade-Retention-and-Social-Promotion-2011.pdf"><picture><source srcset="{{site.data.x.cache}}/414/NASP-Position-Statement-on-Grade-Retention-and-Social-Promotion-2011.avif" type="image/avif"><img alt="NASP Position Statement on Grade Retention and Social Promotion (2011)" width="414" height="536" src="{{site.data.x.cache}}/414/NASP-Position-Statement-on-Grade-Retention-and-Social-Promotion-2011.jpg" fetchpriority="low" loading="lazy" class="bookborder responsive"></picture></a>
-    <a rel="nofollow" class="download" href="{{site.url}}/NASP-Position-Statement-on-Grade-Retention-and-Social-Promotion-2011.pdf" download="NASP Position Statement on Grade Retention and Social Promotion 2011.pdf"><div><svg id="svg-download" viewBox="0 0 2048 1792"><path d="M1344 928q0-14-9-23t-23-9h-224v-352q0-13-9.5-22.5t-22.5-9.5h-192q-13 0-22.5 9.5t-9.5 22.5v352h-224q-13 0-22.5 9.5t-9.5 22.5q0 14 9 23l352 352q9 9 23 9t23-9l351-351q10-12 10-24zm640 224q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z"/></svg>&ensp;Download</div></a>
+    <a rel="nofollow" class="download" href="{{site.url}}/NASP-Position-Statement-on-Grade-Retention-and-Social-Promotion-2011.pdf" download="NASP Position Statement on Grade Retention and Social Promotion 2011.pdf"><div><svg id="svg-download" viewBox="0 0 2048 1792" aria-hidden="true"><path d="M1344 928q0-14-9-23t-23-9h-224v-352q0-13-9.5-22.5t-22.5-9.5h-192q-13 0-22.5 9.5t-9.5 22.5v352h-224q-13 0-22.5 9.5t-9.5 22.5q0 14 9 23l352 352q9 9 23 9t23-9l351-351q10-12 10-24zm640 224q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z"/></svg>&ensp;Download</div></a>
 </aside>
 <p>The National Association of School Psychologists (NASP) advises against holding a student back to repeat a grade (i.e., grade retention), advocating instead for intensive, individualized intervention (see Position Statement excerpted above).</p>
 <p>If your child’s academic performance is substantially below grade level, </p>
@@ -51,7 +51,7 @@ css: |-
 </div></blockquote>
 <aside class="float-right">
 	<a rel="nofollow" href="{{site.url}}/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.pdf"><picture><source srcset="{{site.data.x.cache}}/414/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.avif" type="image/avif"><img alt="NASP White Paper on Grade Retention and Social Promotion (2011)" width="414" height="536" src="{{site.data.x.cache}}/414/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.jpg" fetchpriority="low" loading="lazy" class="bookborder responsive"></picture></a>
-    <a rel="nofollow" class="download" href="{{site.url}}/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.pdf" download="NASP White Paper on Grade Retention and Social Promotion 2011.pdf"><div><svg><use href="#svg-download"/></svg>&ensp;Download</div></a>
+    <a rel="nofollow" class="download" href="{{site.url}}/NASP-White-Paper-on-Grade-Retention-and-Social-Promotion-2011.pdf" download="NASP White Paper on Grade Retention and Social Promotion 2011.pdf"><div><svg aria-hidden="true"><use href="#svg-download"/></svg>&ensp;Download</div></a>
 </aside>
 <p>The NASP warns that grade retention carries significant risks with few, if any, potential benefits (see White Paper excerpted above). A few important questions for parents to consider include:</p>
 <ul>
@@ -66,6 +66,6 @@ css: |-
 </div></blockquote>
 <aside class="float-right">
 	<a rel="nofollow" href="{{site.url}}/NASP-Guidance-on-Grade-Retention-and-Special-Education-2021.pdf"><picture><source srcset="{{site.data.x.cache}}/414/NASP-Guidance-on-Grade-Retention-and-Special-Education-2021.avif" type="image/avif"><img alt="NASP Guidance on the Use of Grade Retention and Special Education Eligibility to Address Instructional Loss (2021)" width="414" height="536" src="{{site.data.x.cache}}/414/NASP-Guidance-on-Grade-Retention-and-Special-Education-2021.jpg" fetchpriority="low" loading="lazy" class="bookborder responsive"></picture></a>
-	<a rel="nofollow" class="download" href="{{site.url}}/NASP-Guidance-on-Grade-Retention-and-Special-Education-2021.pdf" download="NASP Guidance on Grade Retention and Special Education 2021.pdf"><div><svg><use href="#svg-download"/></svg>&ensp;Download</div></a>
+	<a rel="nofollow" class="download" href="{{site.url}}/NASP-Guidance-on-Grade-Retention-and-Special-Education-2021.pdf" download="NASP Guidance on Grade Retention and Special Education 2021.pdf"><div><svg aria-hidden="true"><use href="#svg-download"/></svg>&ensp;Download</div></a>
 </aside>
 <p>The NASP also specifically evaluated the impact of the COVID-19 pandemic and reaffirmed its guidance against grade retention.</p>
