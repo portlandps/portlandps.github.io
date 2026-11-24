@@ -107,7 +107,7 @@ header>div>*{display:block;margin:0 auto;max-width:calc({% if page.layout == 'po
 footer>.cta{align-items:end}
 #bar>.cta a  {border-radius:0 0 .9375rem .9375rem}
 footer>.cta a{border-radius:.9375rem .9375rem 0 0}
-[class^="inverted-radius-"]{width:1rem;height:auto;fill:#1a237e}{%comment%}
+[class^="inverted-radius-"]{width:1rem;height:1rem;fill:#1a237e}{%comment%}
 /* footer>.footer */ {%endcomment%}
 footer{position:relative;z-index:9}
 footer>.footer{font-size:.84375rem;background:#1a237e;color:#fff;{%comment%}<--Fallback{%endcomment%}color:light-dark(#fff,#e0e0e0);padding:0 max(1rem,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(1rem,env(safe-area-inset-left,0px));}
@@ -222,9 +222,9 @@ aside img{display:block;box-sizing: border-box}
         <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" id="menubutton" onclick="m()"><span></span><span></span><span></span></button>
     </div></div>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' or page.url == '/ca/' or page.url == '/ya/' or page.url == '/aa/' %}
     <div class="cta">
-        <svg aria-hidden="true" viewBox="0 0 16 16" class="inverted-radius-top-left"><path d="M16,16 L16,0 L0,0 A16,16 0 0,1 16,16 Z"/></svg>
+        <svg viewBox="0 0 16 16" class="inverted-radius-top-left" aria-hidden="true"><path d="M16,16 L16,0 L0,0 A16,16 0 0,1 16,16 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
-        <svg aria-hidden="true" viewBox="0 0 16 16" class="inverted-radius-top-right"><path d="M0,16 L0,0 L16,0 A16,16 0 0,0 0,16 Z"/></svg>
+        <svg viewBox="0 0 16 16" class="inverted-radius-top-right" aria-hidden="true"><path d="M0,16 L0,0 L16,0 A16,16 0 0,0 0,16 Z"/></svg>
     </div>{% endunless %}
 </nav>
 <main><div>
@@ -232,9 +232,9 @@ aside img{display:block;box-sizing: border-box}
 </div></main>
 <footer>{% unless page.url == '/success/' or page.url == '/go/' or page.url == '/c/' or page.url == '/y/' or page.url == '/a/' or page.url == '/ceap/' or page.url == '/yeap/' or page.url == '/aeap/' or page.url == '/ca/' or page.url == '/ya/' or page.url == '/aa/' %}
     <div class="cta">
-        <svg aria-hidden="true" viewBox="0 0 16 16" class="inverted-radius-bottom-left"><path d="M16,0 L16,16 L0,16 A16,16 0 0,0 16,0 Z"/></svg>
+        <svg viewBox="0 0 16 16" class="inverted-radius-bottom-left" aria-hidden="true"><path d="M16,0 L16,16 L0,16 A16,16 0 0,0 16,0 Z"/></svg>
         <a href="{{site.data.x.cta}}">Schedule a Free Call</a>
-        <svg aria-hidden="true" viewBox="0 0 16 16" class="inverted-radius-bottom-right"><path d="M0,0 L0,16 L16,16 A16,16 0 0,1 0,0 Z"/></svg>
+        <svg viewBox="0 0 16 16" class="inverted-radius-bottom-right" aria-hidden="true"><path d="M0,0 L0,16 L16,16 A16,16 0 0,1 0,0 Z"/></svg>
     </div>{% endunless %}
     <nav class="footer center" aria-label="Footer"><div>
         <div class="FacultyGlyphic">Portland Psychological&nbsp;Services</div>
