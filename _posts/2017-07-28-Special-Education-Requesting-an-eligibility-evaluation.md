@@ -81,7 +81,8 @@ css: |-
     <p>Sincerely,<br>[<mark><span>Parent’s Full Name</span></mark>]<br>[<mark><span>Parent’s email</span></mark>]</p>
 </section>
 <h2 id="flowchart">Special Education Flowchart</h2>
-<div>
-<picture><source sizes="(width < 52rem) calc(100vw - 2rem),50rem" srcset="{{site.data.x.cache}}/320/IEP-Roadmap.avif 320w,{{site.data.x.cache}}/640/IEP-Roadmap.avif 640w,{{site.data.x.cache}}/960/IEP-Roadmap.avif 960w,{{site.data.x.cache}}/1280/IEP-Roadmap.avif 1280w,{{site.data.x.cache}}/1920/IEP-Roadmap.avif 1920w" type="image/avif"><img sizes="(width < 52rem) calc(100vw - 2rem),50rem" id="infographic" alt="IEP Roadmap: How Kids Get Special Education" width="320" height="1149" src="{{site.data.x.cache}}/320/IEP-Roadmap.jpg" srcset="{{site.data.x.cache}}/320/IEP-Roadmap.jpg 320w,{{site.data.x.cache}}/640/IEP-Roadmap.jpg 640w,{{site.data.x.cache}}/960/IEP-Roadmap.jpg 960w,{{site.data.x.cache}}/1280/IEP-Roadmap.jpg 1280w,{{site.data.x.cache}}/1920/IEP-Roadmap.jpg 1920w" class="responsive"></picture>
-</div>
+<div><picture>
+<source sizes="(width < 52rem) calc(100vw - 2rem),50rem" srcset="{{site.data.x.cache}}/320/IEP-Roadmap.avif 320w,{{site.data.x.cache}}/640/IEP-Roadmap.avif 640w,{{site.data.x.cache}}/960/IEP-Roadmap.avif 960w,{{site.data.x.cache}}/1280/IEP-Roadmap.avif 1280w,{{site.data.x.cache}}/1920/IEP-Roadmap.avif 1920w" type="image/avif">
+<img sizes="(width < 52rem) calc(100vw - 2rem),50rem" id="infographic" alt="IEP Roadmap: How Kids Get Special Education" width="320" height="1149" src="{{site.data.x.cache}}/320/IEP-Roadmap.jpg" srcset="{{site.data.x.cache}}/320/IEP-Roadmap.jpg 320w,{{site.data.x.cache}}/640/IEP-Roadmap.jpg 640w,{{site.data.x.cache}}/960/IEP-Roadmap.jpg 960w,{{site.data.x.cache}}/1280/IEP-Roadmap.jpg 1280w,{{site.data.x.cache}}/1920/IEP-Roadmap.jpg 1920w" class="responsive">
+</picture></div>
 <p class="credits right">&copy; <a rel="nofollow noreferrer" href="https://www.understood.org/en/school-learning/special-services/ieps/iep-roadmap-how-to-seek-out-special-education-services-for-your-child">Understood.org</a> | infographic used by invitation to download and share</p>
