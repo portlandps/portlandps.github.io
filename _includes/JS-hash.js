@@ -5,7 +5,7 @@ if(h&&h.length>1){hP=new URLSearchParams(h.substring(1));}
 const links=document.querySelectorAll("[data-p]");
 links.forEach(link=>{
 	try{
-		const hrefValue=link.tagName==='A'?link.href:link.getAttribute("href");
+		const hrefValue=link.tagName==='A'?link.href:link.getAttribute("data-href");
 		let linkURL=new URL(hrefValue);
 		if(hP){
 			const includeAttr=link.getAttribute("data-p");
@@ -16,7 +16,7 @@ links.forEach(link=>{
 			else{hP.forEach((value,key)=>{linkURL.searchParams.set(key,value);});}}
 		const linkHash=linkURL.toString();
 		if(link.tagName==='A'){link.href=linkHash;}
-		else if(link.tagName==='DIV'){
+		else if(link.classList.contains("copy-link")){
 			link.textContent=linkHash;
 			link.addEventListener("click",()=>{
                 navigator.clipboard.writeText(linkHash)

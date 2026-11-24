@@ -18,12 +18,12 @@ css: |-
   fieldset{border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;padding:1.0rem 1.25rem 1.25rem;max-width:39.75rem;margin:2rem auto;background-color:light-dark(#f6f7fd,#1a237e)}
   fieldset legend{padding:.25rem .5rem;border:.125rem solid light-dark(#1a237e,#e0e0e0);border-radius:.5rem;background-color:#fff;background-color:light-dark(#fff,#090b2a);text-align:left}
   fieldset legend h2{font-size:1.25rem;font-weight:500;margin:0;color:#1a237e;color:light-dark(#1a237e,#e0e0e0);text-align:center;}
-  fieldset div{font-size:1.125rem;margin:0 0 1.25rem;}
-  fieldset div:last-child{margin-bottom:0;}
+  fieldset>div{font-size:1.125rem;margin:0 0 1.25rem;}
+  fieldset>div:last-child{margin-bottom:0;}
   fieldset a{background-color:#3949ab;background-color:light-dark(#3949ab,#3949ab);color:light-dark(#fff,#e0e0e0);border:.0625rem solid #3949ab;border-color:light-dark(#3949ab,#e0e0e0);border-radius:.5rem;font-size:1.125rem;text-align:center;padding:.375rem .625rem}
-  fieldset a:hover{color:#36f239;color:light-dark(#36f239,#36f239)}
+  fieldset a:hover,fieldset a:focus-visible{color:#36f239;color:light-dark(#36f239,#36f239)}
   .fieldset-flex{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.5rem;}
-  div[href]{overflow-wrap:anywhere;user-select:all;cursor:pointer;font-size:.75em;}
+  .copy-link{overflow-wrap:anywhere;user-select:all;font-size:.75em;text-align:left;padding:0;font-family:inherit}
 ---
 <h1 class="center">Next Steps</h1>
 <fieldset>
@@ -59,5 +59,5 @@ css: |-
 <fieldset>
 	<legend><h2>Teacher Completes</h2></legend>
 	<div>Click the link below to copy it. Then you can send it to your child’s teacher.</div>
-	<div data-p="f,l,b" title="Click to copy link" href="https://forms.portlandpsychological.services/cdavidmaxey/form/SchoolAttentionBehaviorSupport/formperma/8gZ8G5oCUdJGyoJ26DfnY7T2MVt6Nqj6oQNJfxxprbs">https://forms.portlandpsychological.services/cdavidmaxey/form/SchoolAttentionBehaviorSupport/formperma/8gZ8G5oCUdJGyoJ26DfnY7T2MVt6Nqj6oQNJfxxprbs</div>
+	<button type="button" class="copy-link" data-p="f,l,b" title="Click to copy link" data-href="https://forms.portlandpsychological.services/cdavidmaxey/form/SchoolAttentionBehaviorSupport/formperma/8gZ8G5oCUdJGyoJ26DfnY7T2MVt6Nqj6oQNJfxxprbs">https://forms.portlandpsychological.services/cdavidmaxey/form/SchoolAttentionBehaviorSupport/formperma/8gZ8G5oCUdJGyoJ26DfnY7T2MVt6Nqj6oQNJfxxprbs</button>
 </fieldset>
