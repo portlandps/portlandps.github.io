@@ -3,7 +3,7 @@ layout: page
 ---
 <div>
 	<h1 class="center">{% if page.title_br %}{% for title in page.title_br %}{{title}}{% unless forloop.last %} <br>{% endunless %}{% endfor %}{% else %}{{page.title}}{% endif %}{% if page.title_sub %} <br><span id="subtitle">{{page.title_sub}}</span>{% endif %}</h1>
-	{% if page.updated != null %}<div class="timeago">Updated: <span id="updated" title="{{ page.updated | date: '%e %B %Y' }}">{{ page.updated | date: '%e %B %Y' }}</span></div>{% endif %}<div class="timeago">Published: <span id="published" title="{{ page.date | date: '%e %B %Y' }}">{{ page.date | date: '%e %B %Y' }}</span></div>
+	{% if page.updated != null %}<div class="timeago">Updated: <span id="updated" title="{{ page.updated | date: '%e %B %Y' | strip }}">{{ page.updated | date: '%e %B %Y' | strip }}</span></div>{% endif %}<div class="timeago">Published: <span id="published" title="{{ page.date | date: '%e %B %Y' | strip }}">{{ page.date | date: '%e %B %Y' | strip }}</span></div>
 	{{content}}
 <div class="clear"></div>
 </div>{% assign solo = true %}{% if page.tags %}

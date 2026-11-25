@@ -16,7 +16,7 @@ aside p.credits{margin-bottom:0}{% endif %}
 .tags{font-size:.875rem;display:flex;flex-wrap:wrap;gap:.5em;margin:1.5rem auto}
 .tag{margin:0 0 0 1em;position:relative;padding:.5em .5em .5em .75em;border-radius:0 .375em .375em 0;display:inline-block;line-height:1;background-color:#767676;color:#fff}
 .tag:before{position:absolute;transform:translateY(-50%) translateX(50%) rotate(-45deg);top:50%;right:100%;content:'';background-color:inherit;width:1.41421356em;height:1.41421356em;border-bottom-right-radius:100%}
-.tag:after{position:absolute;content:'';top:50%;left:-.25em;margin-top:-.25em;background-color:#fff;width:.5em;height:.5em;box-shadow:0 -.0625rem .0625rem 0 rgba(0, 0, 0, .5);border-radius:50%}
+.tag:after{position:absolute;content:'';top:50%;left:-.25em;margin-top:-.25em;background-color:#fff;background-color:light-dark(#fff,#090b2a);width:.5em;height:.5em;box-shadow:0 -.0625rem .0625rem 0 rgba(0, 0, 0, .5);border-radius:50%}
 .tag span{background:#fff;color:#000;padding:0 .35rem .0625rem;border-radius:.45rem;box-shadow:0 -.0625rem .0625rem 0 rgba(0, 0, 0, .5)}
 a.tag:hover,a.tag:focus-visible{background-color:#3949ab;border-color:#3949ab;color:#fff}
 .articles{max-width:50rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:stretch;gap:.5rem}
