@@ -37,7 +37,7 @@ css: |-
   .bullet>*:first-child::before{
       width:2.125rem;margin-right:.375rem;text-align:right;display:inline-block;text-indent:0}
   .bullet>*:first-child::before{content:"•";font-weight:bold}
-  @media print{nav,footer{display:none}html,a{color:#000!important;background-color:transparent}}
+  @media print{:root{color-scheme:light}nav,footer{display:none}html,main{background:#fff}main,main>div{margin:0;padding:0}main a{color:#000}}
 ---
 <h1 class="center">Privacy&nbsp;Practices Notice</h1>
 <div class="notice-border">
