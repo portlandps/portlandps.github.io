@@ -140,8 +140,6 @@ function age(){
 	const hasO=Boolean(of.value.trim()||ol.value.trim());
 	of.required=(!isAdult&&p.value==="another parent.")||hasO;
 	ol.required=(!isAdult&&p.value==="another parent.")||hasO;
-	of.required=!isAdult&&p.value==="another parent.";
-	ol.required=!isAdult&&p.value==="another parent.";
 	oe.required=!isAdult&&p.value==="another parent.";
 	parentOptional.textContent=isAdult?" (Optional)":"";
 	pay.textContent=isAdult?"Required if your parent is\u00A0paying\u00A0for\u00A0services.":"";
