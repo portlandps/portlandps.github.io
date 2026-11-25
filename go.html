@@ -85,7 +85,7 @@ css: |-
 		<input type="hidden" id="date" name="Date"/>
 		<input type="hidden" id="gy" name="Number">
 		<label for="g">Client’s Current Grade in School</label>
-		<select name="Dropdown" id="g" required>
+		<select name="Dropdown" id="g" aria-describedby="summer" required>
 			<option value="" disabled selected hidden></option>
 			<option id="gD" value="Daycare (too young for school)">Daycare (too young for school)</option>
 			<option id="gP" value="Pre-K">Pre-K</option>
@@ -108,8 +108,8 @@ css: |-
 		<div id="summer"></div>
 		<div id="e_">
 			<label for="e">Client’s email<span> (for calendar invites, etc.)</span></label>
-			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="section-client email" inputmode="email" maxlength="255"/>
-			<div>A work or school email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
+			<input  type="email" id="e" name="Email" placeholder="email (optional)" autocomplete="section-client email" inputmode="email" maxlength="255" aria-describedby="enote"/>
+			<div id="enote">A work or school email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 		</div>
 	</fieldset>
 	<fieldset>
@@ -125,8 +125,8 @@ css: |-
 			<input type="text" id="o" name="Radio_allow_others_text" placeholder="Other Insurance" required autocomplete="off" maxlength="150" list="insurance" disabled/>
 		</div>
 		<label for="a">Authorization Code</label>
-		<input type="text" id="a" name="SingleLine1" placeholder="Authorization Code" autocomplete="off" maxlength="255"/>
-		<div>Authorization is usually unnecessary.</div>
+		<input type="text" id="a" name="SingleLine1" placeholder="Authorization Code" autocomplete="off" maxlength="255" aria-describedby="anote"/>
+		<div id="anote">Authorization is usually unnecessary.</div>
 	</fieldset>
 	<fieldset id="parent">
 		<legend><h2>Parent<span id="parentOptional"></span></h2></legend>
@@ -136,8 +136,8 @@ css: |-
 		<label for="pn">Parent’s Preferred Name</label>
 		<input  type="text" id="pn" name="SingleLine2" placeholder="Preferred Name" autocomplete="section-parent nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="pe">Parent’s email</label>
-		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="section-parent email" inputmode="email" maxlength="255"/>
-		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
+		<input  type="email" id="pe" name="Email1" placeholder="email" required autocomplete="section-parent email" inputmode="email" maxlength="255" aria-describedby="penote"/>
+		<div id="penote">A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
 	<div id="p_">
 		<label for="p">The client has</label>
@@ -166,8 +166,8 @@ css: |-
 		<label for="on">Other Parent’s Preferred Name</label>
 		<input  type="text" id="on" name="SingleLine3" placeholder="Preferred Name" autocomplete="section-other nickname" inputmode="text" maxlength="255" autocapitalize="words"/>
 		<label for="oe">Other Parent’s email</label>
-		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="section-other email" inputmode="email" maxlength="255"/>
-		<div>A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
+		<input  type="email" id="oe" name="Email2" placeholder="email" required autocomplete="section-other email" inputmode="email" maxlength="255" aria-describedby="oenote"/>
+		<div id="oenote">A work email is not recommended for privacy reasons. By providing an email address or sending an email, you acknowledge that email may not be secure and authorize email communication of protected health information.</div>
 	</fieldset>
 	<label id="concernsLabel" for="concerns">Why are you looking for services? What&nbsp;are&nbsp;your&nbsp;concerns?</label>
 	<textarea id="concerns" name="MultiLine" maxlength="65535" placeholder="Optional" autocorrect="on" spellcheck="true" autocapitalize="sentences"></textarea>
