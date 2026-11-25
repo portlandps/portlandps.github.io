@@ -40,6 +40,7 @@ css: |-
   .streetview-label>div{border-radius:.5rem;color:#fff;color:light-dark(#fff,#e0e0e0);background-color:#1a237e;padding:.4875rem .6rem .4875rem}
   .streetview{line-height:0;margin:0 calc(0rem - max(1rem,env(safe-area-inset-right,0px))) 3rem calc(0rem - max(1rem,env(safe-area-inset-left,0px)))}
   .streetview a{display:block;max-width:40rem;margin:0 auto}
+  [class^="inverted-radius-small-"]{width:.5rem;height:.5rem}
   main p,
   h3.social{font-size:1.125rem;margin:0 auto 1.25em;max-width:50rem}
   h2{font-size:2rem;font-weight:500;line-height:1.15;margin:0 0 2rem;color:#1a237e;color:light-dark(#1a237e,#e0e0e0)}
@@ -106,9 +107,9 @@ css: |-
 		<div>{{site.data.x.address}}</div>
 	</div>
 	<div>
-		<svg width="8" height="8" id="inverted-radius-left" aria-hidden="true"><path d="M8,8 L8,0 L0,0 A8,8 0 0,1 8,8 Z"/></svg>
+		<svg width="8" height="8" class="inverted-radius-small-left" aria-hidden="true"><path d="M8,8 L8,0 L0,0 A8,8 0 0,1 8,8 Z"/></svg>
 		<div>{{site.data.x.city}}, {{site.data.x.state|upcase|truncate:2,''}} {{site.data.x.zip}}</div>
-		<svg width="8" height="8" id="inverted-radius-right" aria-hidden="true"><path d="M0,8 L0,0 L8,0 A8,8 0 0,0 0,8 Z"/></svg>
+		<svg width="8" height="8" class="inverted-radius-small-right" aria-hidden="true"><path d="M0,8 L0,0 L8,0 A8,8 0 0,0 0,8 Z"/></svg>
 	</div>
 </div>
 <div class="map">
