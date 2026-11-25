@@ -11,8 +11,9 @@ if(h&&h.length>1){
 	const bE=hP.get("customer_email")||hP.get("be");
 	const cF=hP.get("Client's_Legal_First_Name_(Child\u00A0or\u00A0Young\u00A0Adult)")||hP.get("cf");
 	const cL=hP.get("Client's_Legal_Last_Name_(Child\u00A0or\u00A0Young\u00A0Adult)")||hP.get("cl");
-	if(bF!==null||bL!==null||bE!==null){
-		if(bF===cF&&bL===cL){
+	const norm = s => (s ? s.trim().toLowerCase() : "");
+	if(bF!== null||bL!==null||bE!==null){
+		if((bF||bL)&&norm(bF)===norm(cF)&&norm(bL)===norm(cL)){
 			if(bF){
 				const f=document.getElementById("f");
 				if(f){f.value=bF;}}
@@ -130,11 +131,15 @@ function age(){
 	e.placeholder=isAdult?"email":"email (optional)";
 	e_.hidden=isChild;
 	e.disabled=isChild;
-	pf.required=!isAdult;
-	pl.required=!isAdult;
+	const hasP=Boolean(pf.value.trim()||pl.value.trim());
+	pf.required=!isAdult||hasP;
+	pl.required=!isAdult||hasP;
 	pe.required=!isAdult;
 	p_.hidden=isAdult;
 	p.disabled=isAdult;
+	const hasO=Boolean(of.value.trim()||ol.value.trim());
+	of.required=(!isAdult&&p.value==="another parent.")||hasO;
+	ol.required=(!isAdult&&p.value==="another parent.")||hasO;
 	of.required=!isAdult&&p.value==="another parent.";
 	ol.required=!isAdult&&p.value==="another parent.";
 	oe.required=!isAdult&&p.value==="another parent.";
@@ -143,11 +148,13 @@ function age(){
 	anotherOptional.textContent=isAdult?" (Optional)":"";
 	another.hidden=!isAdult&&["another parent who is now deceased.","never had another parent."].includes(p.value);
 	another.disabled=!isAdult&&["another parent who is now deceased.","never had another parent."].includes(p.value);
+	[e,pe,oe].forEach(el => el.setCustomValidity(""));
 }
 const form=document.getElementById("form");
 form.addEventListener("change",showother);
 b.addEventListener("change",age);
 p.addEventListener("change",age);
+[pf,pl,of,ol].forEach(el=>el.addEventListener("input",age));
 age();
 showother();
 form.addEventListener("submit",function(event){
