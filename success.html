@@ -26,6 +26,8 @@ css: |-
   .address>div:last-child div {padding:0 .4em .325em;margin-top:-.1625em;border-top-left-radius:0;border-top-right-radius:0}
   .map{height:40rem;overflow-x:hidden;margin:0 calc(0rem - max(1rem,env(safe-area-inset-right,0px))) 3rem calc(0rem - max(1rem,env(safe-area-inset-left,0px)))}
   .map img{position:relative;top:50%;left:50%;margin-top:-20rem;margin-left:-20rem;width:40rem;height:40rem}
+  .location{position:relative;z-index:1;font-size:min(4.395604397cqw,1.125rem);line-height:1;margin-top:calc(-.825em - 3rem);margin-bottom:calc(-.825em + 3rem);display:flex;justify-content:center;user-select:none}
+  .location>div{border-radius:.3333333333em;color:#fff;color:light-dark(#fff,#e0e0e0);background-color:#1a237e;padding:.325em .4em .325em}
   .streetview-label{position:relative;z-index:1;font-size:1.5rem;line-height:1;margin-top:-.5rem;margin-bottom:-1.2375rem;display:flex;justify-content:center;user-select:none}
   .streetview-label>div{border-radius:.5rem;color:#fff;color:light-dark(#fff,#e0e0e0);background-color:#1a237e;padding:.4875rem .6rem .4875rem}
   .streetview{line-height:0;margin:0 calc(0rem - max(1rem,env(safe-area-inset-right,0px))) 3rem calc(0rem - max(1rem,env(safe-area-inset-left,0px)))}
@@ -208,6 +210,9 @@ polyline{animation:checkmark 0.5s cubic-bezier(0.55,0.2,0.71,-0.04) 0.7s backwar
 		</div>
 		<div class="map">
 			<a rel="nofollow noreferrer" href="{{site.data.x.googlemaps.url_cid}}"><img src="{{site.data.x.googlemaps.api}}?center={{site.data.x.googlemaps.center|url_encode}}&zoom={{site.data.x.googlemaps.zoom}}&size={{site.data.x.googlemaps.size}}&scale={{site.data.x.googlemaps.scale}}&format={{site.data.x.googlemaps.format}}&maptype={{site.data.x.googlemaps.maptype}}&markers={{site.data.x.googlemaps.markers|prepend:site.url|prepend:'scale:2|icon:'|append:'|'|append:site.data.x.googlemaps.markers_address|url_encode}}&key={{site.data.x.googlemaps.key}}&signature={{site.data.x.googlemaps.signature}}" crossorigin="anonymous" fetchpriority="low" loading="lazy" height="1280" width="1280" alt="Google Maps of {{site.data.x.address|replace:'Suite','Ste'}}, {{site.data.x.city}}, {{site.data.x.state|upcase|truncate:2,''}} {{site.data.x.zip}}"></a>
+		</div>
+		<div class="location center">
+			<div>Tigard Triangle (near&nbsp;I‑5&nbsp;&amp;&nbsp;217/Kruse&nbsp;Way)</div>
 		</div>
 		<div class="streetview-label center">
 			<div>Street View</div>
