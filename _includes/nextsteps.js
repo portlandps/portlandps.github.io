@@ -1,33 +1,29 @@
 let toastTimeout;
-const h=window.location.hash;
-let hP=null;
-if(h&&h.length>1){hP=new URLSearchParams(h.substring(1));}
+const toast=document.getElementById("toast");
 const links=document.querySelectorAll("[data-p]");
+function showToast(msg){
+	toast.textContent=msg;
+	toast.classList.add("show");
+	clearTimeout(toastTimeout);
+	toastTimeout=setTimeout(()=>toast.classList.remove("show"),3500);}
 links.forEach(link=>{
-	try{
-		const hrefValue=link.tagName==='A'?link.href:link.getAttribute("data-href");
-		let linkURL=new URL(hrefValue);
-		if(hP){
-			const includeAttr=link.getAttribute("data-p");
-			if(includeAttr){
-				const allowedKeys=includeAttr.split(",").map(key=>key.trim());
-				allowedKeys.forEach(key=>{if(hP.has(key)){linkURL.searchParams.set(key,hP.get(key));}});
-			} 
-			else{hP.forEach((value,key)=>{linkURL.searchParams.set(key,value);});}}
-		const linkHash=linkURL.toString();
-		if(link.tagName==='A'){link.href=linkHash;}
-		else if(link.classList.contains("copy-link")){
-			link.textContent=linkHash;
-			link.addEventListener("click",()=>{
-                navigator.clipboard.writeText(linkHash)
-                    .then(() => {
-                        const toast=document.getElementById("toast");
-                        toast.classList.add("show");
-                        clearTimeout(toastTimeout);
-                        toastTimeout=setTimeout(()=>{toast.classList.remove("show");},2500);})
-                    .catch(err=>console.error("Failed to copy:",err));
-            });
-        }
-    }
-	catch(error){}
-});
+	if(link.classList.contains("copy-link")){
+		link.addEventListener("click",()=>{
+			navigator.clipboard.writeText(link.textContent)
+			.then(()=>showToast("Link copied to clipboard!"))
+			.catch(()=>showToast("Select the link and copy it."));});}});
+function updateLinks(){
+	const params=new URLSearchParams(location.hash.slice(1));
+	links.forEach(link=>{try{
+		const raw=link.tagName==="A"?link.href:link.getAttribute("data-href");
+		const url=new URL(raw);
+		url.search="";
+		const attr=link.getAttribute("data-p");
+		const keys=attr?attr.split(",").map(k=>k.trim()).filter(Boolean):[...params.keys()];
+		keys.forEach(k=>{if(params.has(k))url.searchParams.set(k,params.get(k));});
+		const next=url.toString();
+		if(link.tagName==="A")link.href=next;
+		else if(link.classList.contains("copy-link"))link.textContent=next;}
+		catch{}});}
+updateLinks();
+addEventListener("hashchange", updateLinks);
